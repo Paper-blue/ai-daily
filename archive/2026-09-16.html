@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 技术热点日报 · 2026-09-16</title>
+<style>
+  :root {
+    --bg: #0f1419;
+    --surface: #1a2332;
+    --surface2: #243044;
+    --text: #e7ecf3;
+    --muted: #9aa8bc;
+    --accent: #5b9fd4;
+    --accent2: #7ec8a3;
+    --border: #2d3a4d;
+    --tag-models: #5b9fd4;
+    --tag-research: #c9a45c;
+    --tag-tools: #7ec8a3;
+    --tag-industry: #c97b9b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+      "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    font-size: 16px;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 3rem;
+  }
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  .eyebrow {
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin: 0 0 0.4rem;
+  }
+  h1 {
+    font-size: 1.55rem;
+    font-weight: 700;
+    margin: 0 0 0.75rem;
+    line-height: 1.3;
+  }
+  .intro {
+    color: var(--muted);
+    margin: 0;
+    font-size: 0.95rem;
+  }
+  .section {
+    margin: 1.75rem 0 0.75rem;
+  }
+  .section h2 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+    margin: 0;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--border);
+  }
+  article {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.1rem 1.15rem;
+    margin: 0.85rem 0;
+  }
+  article h3 {
+    font-size: 1.05rem;
+    font-weight: 650;
+    margin: 0 0 0.55rem;
+    line-height: 1.4;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.12rem 0.45rem;
+    border-radius: 4px;
+    margin-right: 0.4rem;
+    vertical-align: middle;
+    letter-spacing: 0.02em;
+  }
+  .tag.models { background: rgba(91,159,212,0.18); color: var(--tag-models); }
+  .tag.research { background: rgba(201,164,92,0.18); color: var(--tag-research); }
+  .tag.tools { background: rgba(126,200,163,0.18); color: var(--tag-tools); }
+  .tag.industry { background: rgba(201,123,155,0.18); color: var(--tag-industry); }
+  article p {
+    margin: 0 0 0.65rem;
+    color: var(--text);
+    font-size: 0.92rem;
+  }
+  article p:last-of-type { margin-bottom: 0.5rem; }
+  .sources {
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  .sources a {
+    color: var(--accent);
+    text-decoration: none;
+    word-break: break-all;
+  }
+  .sources a:hover { text-decoration: underline; }
+  footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+  @media (max-width: 480px) {
+    .wrap { padding: 1.1rem 0.9rem 2.5rem; }
+    h1 { font-size: 1.3rem; }
+    article { padding: 0.95rem 1rem; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="eyebrow">AI Daily · Asia/Shanghai</p>
+    <h1>AI 技术热点日报 · 2026-09-16</h1>
+    <p class="intro">过去约 24 小时的主线是「实时语音智能」与「企业/智能体侧的专用推理」并行推进：Google 推出 Gemini 3.8 Live 系列，Salesforce 基于 Nemotron 发布 CRM 推理模型 Koa；研究与开源侧则集中在检索加速、agentic RL 与持续自改进基础设施。头部实验室同时推进行业安全标准协作。</p>
+  </header>
+
+  <div class="section"><h2>模型 Models</h2></div>
+
+  <article>
+    <h3><span class="tag models">模型</span>Google 发布 Gemini 3.8 Live 与 Live Extended Thinking</h3>
+    <p>Google 于 9 月 15 日推出两款面向近实时对话与语音智能体的模型：3.8 Live 侧重规模与成本，强调流体对话与视觉 grounding；3.8 Live Extended Thinking 面向高复杂度多步任务，支持边推理边说话、后台工具调用与进度旁白。官方称 Extended Thinking 在 Artificial Analysis Speech to Speech Quality Index 取得 82.6（总体第一），并在 τ-Voice、Big Bench Audio 等基准上表现突出。</p>
+    <p>对开发者而言，两款模型已通过 Gemini API 与 Google AI Studio 开放；企业侧进入 Gemini Enterprise 私有预览。音频输出带 SynthID 水印。这标志着「语音 + 工具调用 + 实时视觉」正从 demo 走向可部署的 Live API 能力栈。</p>
+    <p class="sources">来源：<a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/" rel="noopener">Google Blog</a></p>
+  </article>
+
+  <article>
+    <h3><span class="tag models">模型</span>Salesforce × NVIDIA 发布 CRM 推理模型 Koa</h3>
+    <p>Salesforce 与 NVIDIA 于 9 月 15 日宣布 Koa：在 NVIDIA Nemotron 3 Super 上后训练得到的首个 CRM 推理模型，面向 Agentforce。训练使用基于近 30 年 CRM 部署经验构造的合成场景（官方称未使用客户数据），覆盖 14+ 行业的多步工作流，采用 SFT + GRPO（NeMo RL / Gym / AutoModel）。Salesforce 称在自建 CRM 基准上错误率约为领先通用模型的三分之一，且权重与推理均留在自家信任边界内。</p>
+    <p>当前向部分试点客户开放，美国区域预计 2026 冬正式 GA；同时将 Nemotron 系能力引入 Missionforce，面向私有云与气隙环境。对构建者的信号是：垂直领域「动作级」后训练 + 自托管权重，正成为企业 agent 的明确产品路径。</p>
+    <p class="sources">来源：<a href="https://www.salesforce.com/news/stories/koa-reasoning-model/" rel="noopener">Salesforce News</a> · <a href="https://www.salesforce.com/news/press-releases/2026/09/15/koa-reasoning-model/" rel="noopener">Press Release</a></p>
+  </article>
+
+  <article>
+    <h3><span class="tag models">模型</span>TypeSafe AI 发布面向机器的决策模型 Jev</h3>
+    <p>TypeSafe AI（据报道获 4000 万美元融资，CEO 为前 OpenAI 研究员、RLHF 相关工作贡献者 Diogo Almeida）于本周发布 Jev：不以自然语言回复，而是输出带概率的类型化结构化决策（Choice / Score / Noul 等原语），供软件或其他模型消费。架构称 System One + RLCD（Reinforcement Learning for Calibrated Decisions），并行产出全部决策，宣称延迟约 70–500ms，显著低于顺序解码 LLM。</p>
+    <p>演示场景包括用结构化状态玩 Doom，以及客服分流等约束决策；定价宣传为输入 $0.042/MTok、输出免费。对 agent 工具调用与自动化流水线，「类型安全 + 低延迟决策头」是与 chat LLM 互补的一条技术路线——需注意其「无幻觉」说法主要指输出形态，不代表决策一定正确。</p>
+    <p class="sources">来源：<a href="https://www.theregister.com/ai-and-ml/2026/09/16/typesafe-ai-debuts-model-for-machines-that-plays-doom/5296711" rel="noopener">The Register</a>（2026-09-16）</p>
+  </article>
+
+  <div class="section"><h2>研究 Research</h2></div>
+
+  <article>
+    <h3><span class="tag research">研究</span>Google Research：Retrieve-for-Train 用扩散检索绕过推理时 fan-out 瓶颈</h3>
+    <p>Google Research 于 9 月 15 日撰文介绍 ICML 2026 论文工作：用离线 RL 训练 fan-out 语言模型（在 Gemma3-4B / Qwen3-4B 上，复合奖励覆盖 groundedness、多样性 Vendi Score、对齐），再把行为蒸馏到约 5390 万参数的扩散检索器，一次非自回归前向生成整组目标 embedding。目标是在集合级属性（多样性、互补、覆盖）上做 query fan-out，而无需在线消耗大量 CoT thinking tokens。</p>
+    <p>官方称相对自回归 fan-out 可获约 12–20× 加速，更适合亚秒级搜索/推荐场景。对做 RAG 与集合检索的团队，这是「把昂贵探索移到训练、把部署压成轻量扩散先验」的清晰范式。</p>
+    <p class="sources">来源：<a href="https://research.google/blog/bypassing-inference-bottlenecks-accelerating-complex-ai-search-with-retrieve-for-train/" rel="noopener">Google Research Blog</a></p>
+  </article>
+
+  <div class="section"><h2>工具与基础设施 Tools / Infra</h2></div>
+
+  <article>
+    <h3><span class="tag tools">工具</span>FlashREINFORCE：半 rollout 成本的 agentic RL，已接入 NVIDIA Molt</h3>
+    <p>近期报道称 NVIDIA 相关工作开源了 FlashREINFORCE——面向智能体语言模型的无 critic、单 rollout 异步 RL 算法，在多项任务上相对 GRPO 以约一半 rollout 量达到相当或更好精度（例如 Qwen2.5-Math-1.5B 数学均值 38.0 vs GRPO 36.3，rollout 256k vs 512k）。参考实现 Apache 2.0，并已写入 NVIDIA NeMo Labs 的 Molt 框架 2026-09 更新说明。</p>
+    <p>Molt（PyPI: molt-rl）文档给出 <code>flash_reinforce</code> 估计器与 force_on_policy、binary-KL IS 校正等启动参数。对在 GPU 集群上做 agent RL 微调的团队，直接含义是同等预算可跑约两倍实验，或砍半硬件规模。</p>
+    <p class="sources">来源：<a href="https://www.techtimes.com/articles/327526/20260915/nvidia-open-sources-flashreinforce-half-rollout-cost-better-accuracy.htm" rel="noopener">TechTimes</a>（2026-09-15）· <a href="https://github.com/NVIDIA-NeMo/labs-molt" rel="noopener">NVIDIA-NeMo/labs-molt</a> · <a href="https://pypi.org/project/molt-rl/0.1.8/" rel="noopener">molt-rl 0.1.8</a></p>
+  </article>
+
+  <article>
+    <h3><span class="tag tools">工具</span>开源 Reef：把推理服务做成持续自改进智能体的基础设施</h3>
+    <p>Hugging Face 社区博文（9 月 15 日）介绍开源项目 Reef：主张持续自改进（含更广义的 RSI 方向）基础设施应首先是推理基础设施——在真实流量上收集轨迹与反馈，异步更新模型权重与 harness（提示、工具、编排等），经评估与版本控制后再热更新上线。提供兼容 OpenAI 格式的服务端点、经验流、基于 Git LFS 的产物版本链，以及可插拔 learning recipes。</p>
+    <p>代码仓库：Human-Agent-Society/reef。对想做 online RL / harness 进化 / 热更新而不只是「训完再部署」的团队，这是一套把 serving–learn–eval–release 闭环产品化的参考实现。</p>
+    <p class="sources">来源：<a href="https://huggingface.co/blog/quao627/your-inference-server-is-secretly-a-learner-reef" rel="noopener">Hugging Face Blog</a> · <a href="https://github.com/Human-Agent-Society/reef" rel="noopener">GitHub: reef</a></p>
+  </article>
+
+  <div class="section"><h2>产业 Industry</h2></div>
+
+  <article>
+    <h3><span class="tag industry">产业</span>OpenAI、Anthropic、Google 讨论共建 AI 安全标准机制</h3>
+    <p>CNBC 等 9 月 15 日报道：OpenAI 证实正与 Anthropic、Google 就如何协作应对安全关切进行沟通；相关讨论可追溯至 DeepMind 的 Demis Hassabis 7 月提出的美方主导「Standards Body」设想（类似 FINRA 的公私合作/自律组织）。背景是业界对前沿模型节奏与风险的压力上升，Anthropic CEO Dario Amodei 呼吁放缓最先进模型改进速度，Altman 与 Hassabis 等公开表示方向认同。</p>
+    <p>OpenAI 全球事务负责人 Chris Lehane 此前撰文称将推进行业主导的自愿标准，「有无政府支持都会做」，并强调自愿标准应补充而非取代强制联邦监管。对构建者而言，短期产品节奏与评测/发布门槛可能随行业协调而收紧，值得持续跟踪。</p>
+    <p class="sources">来源：<a href="https://www.cnbc.com/2026/09/15/open-ai-google-anthropic-safety.html" rel="noopener">CNBC</a>（2026-09-15）</p>
+  </article>
+
+  <footer>
+    生成于 2026-09-16（Asia/Shanghai）· 条目均来自已核对的公开报道与官方博客；未编造事实或链接。FlashREINFORCE 算法公开略早于 24 小时窗口，但 9 月中旬媒体与 Molt 集成更新仍属当周技术热点。
+  </footer>
+</div>
+</body>
+</html>
