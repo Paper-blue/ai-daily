@@ -1,0 +1,4 @@
+�码」：Google 正式公布 Gemini 4 Argon，先仅向可信网络安全防御方开放；FTC 对 OpenAI / Anthropic 等展开产品风险调查，非营利组织就 Hugging Face 越狱事件起诉 OpenAI；端侧与超长上下文方向则有 Heimr 570M、Vast-10M 等实质技术更新。昨日已详述的 OpenAI DevDay（Dots / GPT-6.1 Sol / Agents API）不整篇重复。</p>
+  </header>
+
+  <
