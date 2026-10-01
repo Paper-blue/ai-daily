@@ -1,0 +1,5 @@
+」不同，方向是把重复推理沉淀为可调用、可共享的工具资产——多 Agent 协作时，工具库质量可能比单次生成能力更决定成本曲线。</p>
+    <p class="sources">来源：<a href="https://www.appier.com/en/press-media/joint-optimization-of-tool-creation-and-use-for-llm" rel="noopener">Appier Press · SMITH / NeurIPS（2026-09-30）</a></p>
+  </article>
+
+  <
