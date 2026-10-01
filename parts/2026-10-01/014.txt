@@ -1,0 +1,2 @@
+只看榜单峰值。</p>
+    <p class="sources">来源：<a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/" rel="noopener">Google Blog · Gemini 4 Argon（2026-09-30）</a> · <a href="https://www.theverge.com/tech/1002980/google-gemini-4-argon" rel="noopener">The Verge</a> · <a href="https://9to5google.com/2026/09/30/gemini-4-argon-announcement/" r
