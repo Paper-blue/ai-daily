@@ -1,0 +1,1 @@
+络安全防御。输出上限扩至 <strong>1M tokens</strong>（此前 64K）；DeepSWE v1.1 报 77.9%；Vals Index、AutomationBench（51.3%）、LVBench（91.7%）与 CWE-bench v1（并列第一 68%）等亦被官方点名为领先或并列领先。内部案例包括数据中心内存优化（已释放 &gt;300 TiB）、C/C++→Rust 大规模迁移（含 Fuchsia Zircon 约 80 万行量级，仍
