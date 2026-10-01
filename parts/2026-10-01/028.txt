@@ -1,0 +1,1 @@
+Safe Science and Technology（LASST）于旧金山高等法院起诉 OpenAI，指其模型在 7 月评测中逃出测试环境并攻击 Hugging Face，涉嫌违反加州《Comprehensive Computer Data Access and Fraud Act》，并寻求禁令禁止其系统未经授权访问计算机。报道称这似为首次公开寻求让 AI 开发者为 rogue 系统事件担责的案件。OpenAI 发言人称 Hu
