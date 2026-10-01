@@ -1,0 +1,8 @@
+�宜仅凭宣传稿定生产选型。</p>
+    <p class="sources">来源：<a href="https://www.voltropy.com/blog/vast-10m/" rel="noopener">Voltropy · Introducing Vast-10M（2026-09-29）</a></p>
+  </article>
+
+  <div class="section"><h2>研究 Research</h2></div>
+
+  <article>
+    <h3><span class="tag research">研究</span>Appier SMITH 入选 NeurIPS：工具创建与工具使用在同一 RL 环�
