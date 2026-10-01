@@ -1,0 +1,5 @@
+div class="section"><h2>产业与政策 Industry</h2></div>
+
+  <article>
+    <h3><span class="tag industry">产业</span>FTC 调查 OpenAI、Anthropic 等 AI 公司的产品风险</h3>
+    <p>CNBC（9 月 30 日）证实：美国联邦贸易委员会（FTC）已对 OpenAI、Anthropic 及其他 AI 公司就产品潜在危险展开调查；发言人未点名其余对象。报道将其置于 Hugging 
