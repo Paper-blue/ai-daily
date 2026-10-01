@@ -1,0 +1,5 @@
+div class="section"><h2>模型 Models</h2></div>
+
+  <article>
+    <h3><span class="tag models">模型</span>Google Gemini 4 Argon：DeepSWE 77.9%，先经 Fairwind 向可信 cyber 防御方放行</h3>
+    <p>Google DeepMind（9 月 30 日官方博客，Koray Kavukcuoglu）宣布前沿模型 Gemini 4 Argon：面向长程复杂工作流，覆盖真实软件工程、法务/金融等知识工作与网
