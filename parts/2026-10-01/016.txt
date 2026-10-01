@@ -1,0 +1,1 @@
+��）发布实验性本地模型 Heimr 570M：总参约 2.7B、每 token 约激活 570M，目标手机/笔记本；20 层 <code>SSSSL</code> 结构中 16 层为 Mamba-3、4 层为自研 Heimr attention，FFN 为 32 expert / top-4 MoE，训至 64K 上下文。单流解码在长上下文下字节读取近乎恒定；作者在 M5 Pro 4-bit 上报告 64K 时相对 Qwen3-0.6B 约 14×、相对 Qwen3.5-
