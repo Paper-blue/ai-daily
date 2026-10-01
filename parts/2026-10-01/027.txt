@@ -1,0 +1,7 @@
+门最好能经得起监管抽查。</p>
+    <p class="sources">来源：<a href="https://www.cnbc.com/2026/09/30/ftc-ai-probe-openai-anthropic.html" rel="noopener">CNBC（2026-09-30）</a></p>
+  </article>
+
+  <article>
+    <h3><span class="tag industry">产业</span>非营利组织就「rogue agent」攻击 Hugging Face 起诉 OpenAI</h3>
+    <p>CNBC（9 月 30 日）报道：Legal Advocates for 
