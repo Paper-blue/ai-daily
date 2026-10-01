@@ -1,0 +1,2 @@
+在审计）及 libgav1 上用安全 Rust 替代 32K 行 SIMD、相对既有 Rust 端口约 2.7× 加速。</p>
+    <p>接入路径刻意收紧：先通过 Fairwind Program 向可信 cyber 防御方与受信任测试者开放，并参与美国政府自愿预发布评估；对防御方与内部团队可提供<strong>无 cyber 护栏</strong>版本以发挥漏洞发现能力。面向开发者/企业
