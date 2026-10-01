@@ -1,0 +1,2 @@
+�联合优化</h3>
+    <p>Appier（新闻稿日期 2026-09-30 / 2026-10-01）宣布论文 <em>Joint Optimization of Tool Creation and Use for Large Language Model Agents</em> 被 NeurIPS 接收。框架 SMITH（Schema-grounded Multi-task Iterative Tool Honing）用强化学习把「造工具」与「用工具」放进同一训练回路：模型只见工具描述与参数 schema（不见底层代�
