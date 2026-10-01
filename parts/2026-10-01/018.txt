@@ -1,0 +1,6 @@
+��—若你做 on-device agent，应对照其 KV/状态字节增长曲线，而不是只比短上下文 tokens/s。</p>
+    <p class="sources">来源：<a href="https://sevren.ai/blog/heimr-570m" rel="noopener">Sevren · Heimr 570M（October 2026）</a></p>
+  </article>
+
+  <article>
+    <h3><span class="tag models">模型</span>Voltropy Vast-10M：VSA 注意力把原生上下文推到 1000 万 tok
