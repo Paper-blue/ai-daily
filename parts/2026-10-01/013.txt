@@ -1,0 +1,1 @@
+/消费者的更广开放「尽快」推进，起点为付费 API 与 Google AI Ultra。入门价 $2 / $10 per 1M in/out（缓存输入 95% off），入门期后 $4 / $20。对构建者：与 OpenAI 搁置 GPT-6.1 Astra、Anthropic 限制 Mythos Preview 同属「能力已到、放行分阶段」节奏——选型窗口要同时跟踪 API 时间表、护栏差异与政府预发布流程，而不是
