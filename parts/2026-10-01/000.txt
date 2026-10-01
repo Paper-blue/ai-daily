@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 技术热点日报 · 2026-10-01</title>
+<style>
+  :root {
+    --bg: #0f1419;
+    --surface: #1a2332;
+    --surface2: #243044;
+    --text: #e7ecf3;
+    --muted: #9aa8bc;
+    --accent: #5b9fd4;
+    --accent2: #7ec8a3;
+    --border: #2d3a4d;
+    --tag-model
