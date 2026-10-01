@@ -1,0 +1,2 @@
+ens</h3>
+    <p>初创公司 Voltropy（9 月 29 日）发布 Vast-10M 家族（Flash / Medium / Pro，分别基于 DeepSeek V4.0 Flash、GLM-5.2、DeepSeek V4.0 Pro），核心算法为 Voltropy Scalable Attention（VSA）。官方称在自有 BEAM 长上下文基准上，Vast-10M-Flash 在 1M tokens 档可超过 Claude Fable 5.1、逼近 GPT-6 Astra，并在 10M tokens 档保留约 82.5% 的 1M 
