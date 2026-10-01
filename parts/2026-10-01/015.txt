@@ -1,0 +1,6 @@
+el="noopener">9to5Google</a> · <a href="https://www.reuters.com/legal/litigation/google-announces-gemini-4-flagship-ai-model-after-months-delays-2026-09-30/" rel="noopener">Reuters</a></p>
+  </article>
+
+  <article>
+    <h3><span class="tag models">模型</span>Sevren Heimr 570M：Mamba-3 + 新型注意力的端侧混合 MoE，长上下文解码可快数倍</h3>
+    <p>Sevren（2026 年 10 月博�
