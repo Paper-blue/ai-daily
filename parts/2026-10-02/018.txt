@@ -1,0 +1,2 @@
+经 PyPI <code>ai2-olmo-core</code> 安装。相对先前 FSDP「每小批次 gather/reshard」路径，新栈以 DDP 让专家常驻 GPU 并路由数据：在 8×B300、47B MoE 上报告约 <strong>52k tok/s/GPU</strong> vs 旧实现约 19.4k（约 <strong>2.7×</strong>）。专家数从 8→128、每 token 仍选 4 个时，活跃参约固定在 3.2B，总容量 4.6B→47B，吞吐下降 &lt;5%。</p>
+    <p>系统级压测含 <strong>1.2T</strong> 总参 / 58.36B 活跃 / 512 GPU（最高约 858 TFLOP/s/GPU，随机路由测吞吐）；DeepEP v2 短测触及 <strong>2.38T</strong>。另支持 MXFP8（四卡对照约 

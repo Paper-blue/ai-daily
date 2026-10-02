@@ -1,0 +1,5 @@
+/www.infoq.com/news/2026/10/typesafe-ai-jev-released/" rel="noopener">InfoQ · Jev 背景</a></p>
+  </article>
+
+  <footer>
+    生成于 2026-10-02（Asia/Shanghai）· 条目均来自已核对的 Cloudflare Blog、Workers AI Changelog、Strands Agents、TechCrunch、VentureBeat、Runway Research、Ai2 Blog、bioRxiv、arXiv 及行业跟进报道；未编造事实或链接。窗口以约 2026-10-01 至 2026-10-02 上午（Asia/Shanghai）可核实热点为主。昨日已详述的 Gemini 4 Argon、FTC 调查、LASST 诉 OpenAI、Heimr 57

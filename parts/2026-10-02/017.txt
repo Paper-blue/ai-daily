@@ -1,0 +1,8 @@
+-open-weight-praxis-1-ai-model/105402/" rel="noopener">Robotics &amp; Automation News（2026-10-01）</a></p>
+  </article>
+
+  <div class="section"><h2>工具与基础设施 Tools</h2></div>
+
+  <article>
+    <h3><span class="tag tools">工具</span>Ai2 Olmo-core 3：面向万亿参 MoE 的开源训练栈，FSDP→DDP 吞吐约 2.7×</h3>
+    <p>Allen Institute for AI（2026-10-01）发布 <strong>Olmo-core 3</strong>：为下一代 Olmo（计划改用 MoE）重写的开源混合专家训练系统，Apache-2.0，可

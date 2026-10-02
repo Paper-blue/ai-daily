@@ -1,0 +1,2 @@
++21% 吞吐）、rowwise expert parallelism、拓扑无关 checkpoint 等；技术报告披露「token gerrymandering」等负结果。对构建者：若你训大 MoE，这是 Megatron-Core 之外可审计的 PyTorch 路线——适合复现路由/并行实验，而非只消费闭源训练配方。</p>
+    <p class="sources">来源：<a href="https://allenai.org/blog/olmocore3" rel="noopener">Ai2 Blog · Olmo-core 3（2026-10-01）</a> · <a href="https://allenai.org/papers/olmocore3" rel="noopener">技术报告</a> · <a href="https://www.unite.ai/ai2-

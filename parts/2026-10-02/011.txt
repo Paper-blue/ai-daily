@@ -1,0 +1,6 @@
+口做 A/B；选型时重点看校准（Brier）、延迟分位与是否需要图像输入，而不是只看通用榜单。</p>
+    <p class="sources">来源：<a href="https://blog.cloudflare.com/clef-decision-models/" rel="noopener">Cloudflare Blog · Clef（2026-10-01）</a> · <a href="https://developers.cloudflare.com/changelog/post/2026-10-01-clef-workers-ai/" rel="noopener">Workers AI Changelog</a></p>
+  </article>
+
+  <article>
+    <h3><span class="tag models">模型</span>AWS Str

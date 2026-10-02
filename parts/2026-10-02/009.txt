@@ -1,0 +1,8 @@
+Safe Jev；训练侧 Ai2 开源面向万亿参 MoE 的 Olmo-core 3；具身侧 Runway 公布将视频预训练迁到机器人控制的 Praxis-1。昨日已详述的 Gemini 4 Argon 不整篇重复。</p>
+  </header>
+
+  <div class="section"><h2>模型 Models</h2></div>
+
+  <article>
+    <h3><span class="tag models">模型</span>Cloudflare Clef / Clef-flash：首批自研决策模型，Apache-2.0 + Workers AI + RL 微调</h3>
+    <p>Cloudflare（2026-10-01 官方博客）发布 Workers AI 团队训练的决策模型 <strong>Clef（约 27B）</strong> 与 <strong

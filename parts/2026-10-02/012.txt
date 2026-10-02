@@ -1,0 +1,3 @@
+ands Decider 2B：约 2B 开源决策模型，权重+训练数据+脚本全开</h3>
+    <p>AWS Strands Labs（2026-10-01，Marc Brooker 等）发布 <code>strands-decider-2b</code>：以 <strong>Qwen3.5-2B</strong> 为 torso，去掉 LM head、换上约百万参的 pointer head，并用 rank-16 LoRA 微调；在选项位与决策位隐藏状态之间打分，一次并行给出选择与置信度。官方强调可在本机 CPU/GPU 跑通实验：RTX 3090 上中位决策延迟约 <strong>115ms</strong>，M3 MacBook 小任务约 <strong>153ms</strong>；JevBench 公开集上在约 2B 档宣称精度/校准靠前。</p>
+    <p>与多数「只给

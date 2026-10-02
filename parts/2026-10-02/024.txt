@@ -1,0 +1,8 @@
+l/2609.37976" rel="noopener">arXiv html · S³（2609.37976）</a></p>
+  </article>
+
+  <div class="section"><h2>产业速览 Industry</h2></div>
+
+  <article>
+    <h3><span class="tag industry">产业</span>决策模型赛道一周内从「一家独大」变「多方开源」</h3>
+    <p>自 TypeSafe 推出 Jev（定界选项 + 概率、面向 Agent 热路径）后，10 月 1 日 Cloudflare Clef 与 AWS Strands Decider 几乎同日开源/托管跟进；TechCrunch / VentureBeat 均形容决策模型正「flood the web」。Jev 方称多数跟进更像架构试验而非深度产品化；A

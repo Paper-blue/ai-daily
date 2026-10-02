@@ -1,0 +1,2 @@
+ss="tag models">模型</span>Runway Praxis-1：视频预训练迁到机器人控制的开源权重「世界动作模型」</h3>
+    <p>Runway Research（2026 年 9 月末官宣，10 月 1 日行业跟进）公布 <strong>Praxis-1</strong>：其首个 open-weight world action model，复用与通用世界模型同源的大规模视频预训练，目标跨本体（embodiment）的通用策略。官方报告：互联网视频预训练后物体放置平均误差 <strong>16.1 cm</strong>，与遥操作机器人视频的 <strong>16.0 cm</strong> 在 93 组评估上无显著差别——暗示「无限网页视频」有望缓解机器人示教数据瓶颈。世界模型内仿真策略与真机结果相关达约 <strong>0.95</strong>。</p>

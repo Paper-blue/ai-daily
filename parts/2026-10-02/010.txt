@@ -1,0 +1,2 @@
+>Clef-flash（约 9B）</strong>：输入状态 + 类型化问题，输出各合法选项的概率，而非自由文本。权重以 Apache 2.0 放上 Hugging Face，托管于 Workers AI，并宣称与 Jev API 兼容；另附视觉编码器与 <strong>64K</strong> 上下文（官方对比 Jev 的 32K）。推理路径为 backbone 预填后对 schema 选项并行打分（非自回归），中位延迟官方报 Clef ≈209ms、Clef-flash ≈39ms。</p>
+    <p>同期推出面向客户的 RL 微调/FDE 合作路径，打通 AI Gateway 数据捕获、Containers 沙箱与 BYO Model 重部署。对构建者：这是把「路由工单 / 威胁分类 / 是否升级真人」一类热路径从 LLM 生成挪到定界决策——若你已有 Jev 集成，可按兼容接

@@ -1,0 +1,3 @@
+WS 则强调客户工作流里大量步骤只需可靠闭域选择，不必每次拉满前沿 LLM。</p>
+    <p>对构建者：短期会出现 API 兼容层、本地小模型与边缘托管三路并行——评估应锁定<strong>校准质量、尾延迟、多问题同 prompt 效率、许可与可复现训练</strong>四件事；并设计「决策模型拦一层 + LLM 处理难例」的混合拓扑，避免把所有步骤都绑在单一厂商托管决策 API 上。</p>
+    <p class="sources">来源：<a href="https://techcrunch.com/2026/10/01/amazon-releases-its-own-jev-clone-as-decision-models-flood-the-web/" rel="noopener">TechCrunch（2026-10-01）</a> · <a href="https:/

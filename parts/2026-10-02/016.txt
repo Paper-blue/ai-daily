@@ -1,0 +1,2 @@
+    <p>目前向 Noble Machines（双臂）、Standard Bots（RO1 六轴臂）、Ultra（移动底盘）等伙伴做早期测试，公开权重「未来数月」放出。对构建者：这是生成视频厂商正式杀入具身智能的信号——若你做机器人策略，值得跟踪其跨场景迁移（工作室→厨房）与开放权重许可；现阶段仍是申请制，参数规模与第三方榜单尚未完整公开。</p>
+    <p class="sources">来源：<a href="https://runway.com/research/introducing-praxis-1" rel="noopener">Runway Research · Praxis-1</a> · <a href="https://roboticsandautomationnews.com/2026/10/01/runway-moves-into-robotics-with

@@ -1,0 +1,8 @@
+releases-olmo-core-3-open-training-stack-for-trillion-parameter-moes/" rel="noopener">Unite.AI 综述</a></p>
+  </article>
+
+  <div class="section"><h2>研究 Research</h2></div>
+
+  <article>
+    <h3><span class="tag research">研究</span>BioEvidence：不调参、靠「证据缩放」提升 LLM 零样本蛋白质变异推理</h3>
+    <p>bioRxiv（posted 2026-10-01）论文 <em>Evidence Scaling for Zero-Shot Protein Reasoning with Large Language Models</em> 提出训练无关

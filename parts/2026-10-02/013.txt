@@ -1,0 +1,2 @@
+托管 API」不同，GitHub/Hugging Face 一并放出训练数据与脚本，CLI 为 <code>pip install strands-decider</code>。示例展示用 <code>before_tool_call</code> intervention：在 agent 乱猜城市调天气工具前，用决策模型拦截「参数是否 grounded / 是否过早调用」。对构建者：决策模型适合模型路由、工具选择、护栏与策略分类等「闭域、要校准」步骤；复杂推理仍应交 LLM——混合 Agent 正成为默认架构雏形。</p>
+    <p class="sources">来源：<a href="https://strandsagents.com/blog/introducing-strands-decider/" rel="noopener">Strands Agents · Decide

@@ -1,0 +1,15 @@
+  article p:last-of-type { margin-bottom: 0.5rem; }
+  .sources {
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  .sources a {
+    color: var(--accent);
+    text-decoration: none;
+    word-break: break-all;
+  }
+  .sources a:hover { text-decoration: underline; }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.85em;
+    background: var(--surf

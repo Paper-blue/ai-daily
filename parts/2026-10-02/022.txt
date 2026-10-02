@@ -1,0 +1,6 @@
+tent/10.64898/2026.09.27.754822v1" rel="noopener">bioRxiv · BioEvidence（2026-10-01）</a></p>
+  </article>
+
+  <article>
+    <h3><span class="tag research">研究</span>S³ Spectral Null-Space Swap：无训练组合 Thinking/Non-thinking，推理 token 约降 27%</h3>
+    <p>预印本 <em>S³: Spectral Null-Space Swap Makes Reasoning Models Efficient</em>（约 2026-09-29）提出：推理能力关键成分落在「相对 Non-thinking 模型主奇异方向零空间」的 Thinking 权重里。方法 <strong

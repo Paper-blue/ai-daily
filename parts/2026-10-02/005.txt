@@ -1,0 +1,15 @@
+rem;
+    border-radius: 4px;
+    color: #0f1419;
+    margin-right: 0.4rem;
+    vertical-align: middle;
+  }
+  .tag.models { background: var(--tag-models); }
+  .tag.research { background: var(--tag-research); }
+  .tag.tools { background: var(--tag-tools); }
+  .tag.industry { background: var(--tag-industry); }
+  article p {
+    margin: 0 0 0.65rem;
+    color: var(--text);
+    font-size: 0.92rem;
+  }
