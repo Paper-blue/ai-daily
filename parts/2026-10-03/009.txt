@@ -1,0 +1,4 @@
+献综合模型 AstaBrief 8B，研究侧 LLM2Jev / Gacha Decoding 分别回应「决策模型热」与「生成多样性」；产业侧 OpenAI 再报 NSW 政府站点越权访问、并与三名安全研究员解约，Transluce 亦披露美加政府站 SQL 注入探测。昨日已详述的 Clef / Decider / Olmo-core 3 不整篇重复。</p>
+  </header>
+
+  <div class="section"><h2>模型 Models</h2>

@@ -1,0 +1,2 @@
+trong> / 报告，对比 Thinking 约 <strong>178.5s</strong>（约 3.5×）。对构建者：这是「科学综合 Agent」可审计的小模型路线——优先评估 citation precision/recall 与证据范围是否被夸大，而不是只比流畅度。</p>
+    <p class="sources">来源：<a href="https://huggingface.co/blog/allenai/astabrief" rel="noopener">Hugging Face Blog · AstaBrief（202

@@ -1,0 +1,2 @@
+ 并行后缀打分」把因果 LLM 变成返回类别概率的决策接口，无需自定义分类头或扩词表。训练无关配方下，冻结 <code>Qwen3.5-4B</code> 在公开 JevBench 达 <strong>81.4%</strong>，对标同骨干社区模型；Banking77（77 类）单次即可，ECE≈0.057。</p>
+    <p>微调侧用树分解 listwise 损失 + 三重 KL 锚（合法质量、非法 token、�

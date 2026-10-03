@@ -1,0 +1,5 @@
+</div>
+
+  <article>
+    <h3><span class="tag models">模型</span>Ai2 AstaBrief 8B：开源「带引用科学报告」模型，Fast 模式约 3.5× 快于 Thinking</h3>
+    <p>Allen Institute for AI（2026-10-02 Hugging Face 博客）开源 <strong>AstaBrief 8B</strong>：以 <code>Qwen3-8B</code> 为基座，把研究问题 + 检索到的文献片段一次性写成带引用的长报告。已在 A

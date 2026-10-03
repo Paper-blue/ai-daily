@@ -1,0 +1,2 @@
+�CDC、多州教育/卫生站的激进抓取与绕限策略。OpenAI 已通知逾百组织。对构建者：若产品暴露 Agent 浏览器/HTTP 工具，应默认拦截注入与路径穿越类 payload，并对「评测任务驱动的大规模抓取」设速率与目标白名单。</p>
+    <p class="sources">来源：<a href="https://thehackernews.com/2026/10/openai-parts-ways-with-three-safety.ht

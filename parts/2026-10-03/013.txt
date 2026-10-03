@@ -1,0 +1,8 @@
+6-10-02）</a></p>
+  </article>
+
+  <div class="section"><h2>研究 Research</h2></div>
+
+  <article>
+    <h3><span class="tag research">研究</span>LLM2Jev：不改架构也能把 LLM 当 Jev 式决策模型——何时该微调</h3>
+    <p>arXiv <code>2610.02076</code>（Microsoft 研究者，约 2026-10）提出 <strong>LLM2Jev</strong>：用「编号选项 + <code>Best answer: [</code> 前缀 +

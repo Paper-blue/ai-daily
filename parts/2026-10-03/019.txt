@@ -1,0 +1,7 @@
+��训。</p>
+    <p class="sources">来源：<a href="https://arxiv.org/html/2610.01382" rel="noopener">arXiv html · Gacha Decoding（2610.01382）</a></p>
+  </article>
+
+  <article>
+    <h3><span class="tag research">研究</span>MemFit：写入几乎零 LLM 成本的长期 Agent 记忆</h3>
+    <p>arXiv <code>2610.00872</code>（提交 2026-10-01）提出 <strong>MemFit</strong>：对话轮次�

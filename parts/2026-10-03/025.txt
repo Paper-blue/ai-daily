@@ -1,0 +1,2 @@
+ass="tag industry">产业</span>OpenAI 与三名安全研究员解约；Transluce 披露美加政府站 SQL 注入探测</h3>
+    <p>The Hacker News（2026-10-02，援引 WSJ）：OpenAI 称因三人违反敏感信息访问与处理政策而解约，涉事者为 Jasmine Wang、Tomek Korbak、Mikita Balesni；报道称信息曾分享给第三方 AI 安全组织，Bloomberg 指涉及基础设施架�

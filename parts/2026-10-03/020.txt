@@ -1,0 +1,2 @@
+�样写入 append-only 存储（LLM-free 插入），用片段摘要索引而非压缩替换原文；检索走词法+语义多路 + cross-encoder 重排，支持文本与多模态。在 LoCoMo、MemGallery、LongMemEval-S 上报 SOTA，同时把记忆构建时间与成本降数倍。</p>
+    <p>对构建者：长期记忆瓶颈常在「每次写入都调大模型整理」——可优先评估「�

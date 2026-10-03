@@ -1,0 +1,6 @@
+"https://arxiv.org/html/2610.02076" rel="noopener">arXiv html · LLM2Jev（2610.02076）</a> · <a href="https://arxiv.org/abs/2610.02076" rel="noopener">abs</a></p>
+  </article>
+
+  <article>
+    <h3><span class="tag research">研究</span>Gacha Decoding：把多样性当「指令遵循」——外部掷骰 + 语义自回归</h3>
+    <p>预印本（2026-10-01，华盛顿大学 / Meta Superintellig

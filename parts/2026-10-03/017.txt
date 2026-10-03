@@ -1,0 +1,1 @@
+ence Labs）提出推理时方法 <strong>Gacha Decoding</strong>：先让模型规划决策轴，再对每个轴枚举选项并用外部 RNG 均匀采样，最后按轨迹生成——把多样性从 token 熵转到指令遵循。开放聊天 / 创意写作 / 文生图扩写上，同等质量下 Vendi 最高约达次优先验方法的 <strong>2.4×</strong>；Opus 4.8 上覆盖同等高质量模�

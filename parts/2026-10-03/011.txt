@@ -1,0 +1,2 @@
+sta 平台「Generate a report」中作为 Fast 模式上线，与 Claude 驱动的 Thinking 模式并存；权重与训练数据一并放出，便于机构在防火墙内本地部署。</p>
+    <p>训练以真实科研查询为主（过滤后约 90K 查询 → 47K SFT 全报告 + 6K 双裁判一致的 DPO 对），强调引用密度过滤而非复杂 RL。全链路 Fast 平均约 <strong>51.1s</s
