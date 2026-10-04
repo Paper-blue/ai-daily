@@ -1,0 +1,1 @@
+ThinkingBox</strong> 沙箱与 <strong>ThinkingBox-Bench</strong>：507 个有状态业务工作流（零售、旅行预订、车险、新银行内部 IT、咨询 IT/HR），每任务独立跑 <strong>20</strong> 次；判定看 MCP 工具会话结束后的后端记录与副作用，而不是最终回复是否「听起来对」。论文 <code>arXiv:2608.19741</code>；代码 MIT，数据 CDLA-Perm

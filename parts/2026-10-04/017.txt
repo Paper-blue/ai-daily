@@ -1,0 +1,2 @@
+」上更稳。对构建者：上线触碰真实记录的 Agent 时，应把「终端状态检查 + 重复试次」写进验收，而不是只看单次 demo 或工具调用格式正确。</p>
+    <p class="sources">来源：<a href="https://huggingface.co/blog/microsoft/thinkingbox" rel="noopener">Hugging Face Blog · ThinkingBox（2026-10-03）</a> · <a href="https://arxiv.org/abs/2608.19741" re

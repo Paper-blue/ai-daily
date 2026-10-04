@@ -1,0 +1,2 @@
+pha Kolibri：78.1B MoE / 3.46B 活跃，德英主权开源权重（Apache-2.0）</h3>
+    <p>德国 Aleph Alpha（2026-10-03，德国统一日）发布 <strong>Kolibri</strong>：英德双语 Mixture-of-Experts，总参约 <strong>78.1B</strong>、每 token 活跃约 <strong>3.46B</strong>（384 专家 / top-6 + 1 shared），权重与配置文件以 <strong>Apache 2.0</strong> 上架 Hugging Fac

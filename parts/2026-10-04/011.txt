@@ -1,0 +1,2 @@
+e（<code>Aleph-Alpha/Kolibri-1</code>）。原生长上下文训练至 262,144 tokens，并验证服务至 <strong>1,048,576</strong>；推理需 <code>aleph-alpha-inference</code> 提供的 vLLM 插件，支持 none/low/medium/high 四级 reasoning effort 与工具调用。</p>
+    <p>技术要点：50 层全 MoE、4:1 sliding-window GQA 与全注意力交替、Exact Quantile Balancing 路由、

@@ -1,0 +1,3 @@
+�架构实现细节与方法学仍由公司保留。</p>
+    <p>对构建者：欧洲客户采购清单正从「能不能下载权重」扩到「数据谱系、拒答行为、本地部署足迹」——开源权重不等于可复现训练；合规章节应单独进评估矩阵。</p>
+    <p class="sources">来源：<a href="https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight

@@ -1,0 +1,1 @@
+Muon 优化；预训练约 20T token（德文约占 21–24%），并强调 UniBPE 形态学友好分词与 Merlin-Arthur 式 abstention/grounding。公开表上 AIME 2025（EN）报 96.9、GPQA Diamond（EN）84.3，并称在同活跃规模 Pareto 上兼顾英/德质量与吞吐。对构建者：这是「欧洲合规叙事 + 可本地部署的小活跃 MoE」路线——优先评估德语压缩�

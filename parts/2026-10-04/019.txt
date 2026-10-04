@@ -1,0 +1,2 @@
+e Inference：Blackwell 上开源前沿模型的生产推理——P/D 分离、NVFP4 KV、近零工具调用错误</h3>
+    <p>Prime Intellect（2026-10-02）公开 <strong>Prime Inference</strong>：面向前沿开源模型的 serverless / 预留容量推理服务，栈基于 NVIDIA Dynamo、vLLM、Mooncake、FlashInfer，并跑在 Blackwell（GB200 NVL72）上；首发公开部署为 OpenRouter 

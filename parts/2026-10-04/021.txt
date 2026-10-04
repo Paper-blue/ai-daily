@@ -1,0 +1,2 @@
+��并向上游贡献 FlashInfer 原生稀疏 MLA 核；BLHNC block-major KV 布局把 NIXL 传输描述符数量压约一个数量级。对构建者：长上下文 Agent 服务瓶颈常在「调度气泡 + KV 搬运 + 工具调用结构化约束」，而不只是单卡 tok/s。</p>
+    <p class="sources">来源：<a href="https://www.primeintellect.ai/blog/prime-inference" rel="noopener">Prime Int

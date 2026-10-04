@@ -1,0 +1,5 @@
+-model/" rel="noopener">Aleph Alpha Blog</a> · <a href="https://huggingface.co/Aleph-Alpha/Kolibri-1" rel="noopener">Model Card · License / Responsible Use</a> · <a href="https://aleph-alpha.com/downloads/data-summary.pdf" rel="noopener">Data summary PDF</a></p>
+  </article>
+
+  <footer>
+    生成于 2026-10-04（Asia/Shanghai）· 条目均来自已核对的 Aleph Alpha Blog、Hugging Face（�

@@ -1,0 +1,2 @@
+��箱内 <strong>transparent_proxy</strong>，代理转发 <code>/v1/chat/completions</code> 并记录 token ids 与 logprobs；回合结束后用会话 <code>verify()</code> 打分，再交给 TRL <code>AsyncGRPOTrainer</code>。OpenCode 旧 <code>opencode_env</code> 教程已标 Deprecated，统一迁到 Harbor <code>--harness opencode</code>，但 token 级捕获语义不变。</p>
+    <p>对�

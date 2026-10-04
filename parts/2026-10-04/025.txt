@@ -1,0 +1,7 @@
+Coding Agent GRPO (OpenCode)</a> · <a href="https://huggingface.co/docs/trl/main/en/openenv" rel="noopener">TRL · OpenEnv Integration</a> · <a href="https://huggingface.co/FineEnvs" rel="noopener">Hugging Face · FineEnvs</a></p>
+  </article>
+
+  <div class="section"><h2>产业速览 Industry</h2></div>
+
+  <article>
+    <h3><span class="tag industry">产业</span>Kolibri 的「主权」叙事：

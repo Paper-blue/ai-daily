@@ -1,0 +1,7 @@
+l="noopener">arXiv:2608.19741</a> · <a href="https://github.com/microsoft/thinkingbox" rel="noopener">github.com/microsoft/thinkingbox</a> · <a href="https://huggingface.co/docs/openenv/environments/thinkingbox" rel="noopener">OpenEnv docs</a></p>
+  </article>
+
+  <div class="section"><h2>工具与基础设施 Tools / Infra</h2></div>
+
+  <article>
+    <h3><span class="tag tools">工具</span>Prim

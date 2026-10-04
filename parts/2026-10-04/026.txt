@@ -1,0 +1,2 @@
+EU AI Act / GPAI CoP 合规与供应链透明，权重开源但训练栈自留</h3>
+    <p>Aleph Alpha 在同日发布中强调：模型在德国/芬兰基础设施上训练，对齐 EU AI Act、GPAI Code of Practice 与 GDPR；公开权重与数据策展透明度，并提供欧盟模板式训练数据摘要。但许可证澄清：Apache-2.0 仅覆盖仓库内权重与配置文件，训练代码�

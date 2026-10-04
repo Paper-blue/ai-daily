@@ -1,0 +1,6 @@
+ellect Blog · Prime Inference（2026-10-02）</a></p>
+  </article>
+
+  <article>
+    <h3><span class="tag tools">工具</span>OpenEnv × 生产 Coding Agent：黑盒 harness 训练路径（透明代理抓 token/logprob）</h3>
+    <p>Hugging Face OpenEnv 文档持续推进「不改 Agent 源码、只改模型端点」的训练配方：把 Claude Code / Codex / OpenCode / Pi 等生产 Agent 指到�

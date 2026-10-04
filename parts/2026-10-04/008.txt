@@ -1,0 +1,6 @@
+v class="wrap">
+  <header>
+    <p class="eyebrow">AI Daily · Asia/Shanghai</p>
+    <h1>AI 技术热点日报 · 2026-10-04</h1>
+    <p class="intro" style="margin-top:0.65rem;font-size:0.85rem;">最新日报 · <a href="archive/" style="color:var(--accent);text-decoration:none;">查看归档 Archive</a></p>
+    <p class="intro">过去约 24 小时主线是「可部署开源模型 + 可验证 Agen

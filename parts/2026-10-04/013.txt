@@ -1,0 +1,2 @@
+�拒答率与自有 RAG 场景，而不是只抄英文总分。</p>
+    <p class="sources">来源：<a href="https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/" rel="noopener">Aleph Alpha Blog · Kolibri（2026-10-03）</a> · <a href="https://huggingface.co/Aleph-Alpha/Kolibri-1" rel="noopener">Hugging Face · Aleph-Alpha/Kolibri-1</a> · <a href="https://aleph-alph

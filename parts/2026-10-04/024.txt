@@ -1,0 +1,2 @@
+�建者：这与 ThinkingBox「结果可执行」形成互补——一边评「改没改对库」，一边训「真实 harness 轨迹」。落地时优先固定 sandbox、verifier 与 weight sync，避免把辅助调用（如标题生成）误计入梯度。</p>
+    <p class="sources">来源：<a href="https://huggingface.co/docs/openenv/tutorials/opencode-agent-grpo" rel="noopener">HF OpenEnv · 

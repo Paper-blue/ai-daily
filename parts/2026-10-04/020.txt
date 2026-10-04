@@ -1,0 +1,2 @@
+上的 <strong>GLM-5.3</strong>（文称自 9/22 上线以来近零 tool-call 错误率、100% uptime）。API 兼容 OpenAI，入口 <code>https://api.pinference.ai/api/v1</code>。</p>
+    <p>工程细节值得抄作业：prefill/decode 分离后 p90 词间延迟约降 <strong>40%</strong>；NVFP4 压缩 MLA KV（行约 576→352 字节）在相同显存下约 <strong>+50%</strong> 缓存容量�
