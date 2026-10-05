@@ -1,0 +1,18 @@
+    color: var(--muted);
+  }
+  .sources a {
+    color: var(--accent);
+    text-decoration: none;
+    word-break: break-all;
+  }
+  .sources a:hover { text-decoration: underline; }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.85em;
+    background: var(--surface2);
+    padding: 0.1em 0.35em;
+    border-radius: 4px;
+  }
+  footer {
+    margin-top: 2rem;
+    padding-top: 1rem;

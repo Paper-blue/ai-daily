@@ -1,0 +1,18 @@
+  </header>
+
+  <div class="section"><h2>模型 Models</h2></div>
+
+  <article>
+    <h3><span class="tag models">模型</span>Google DiarizationLM-Gemma-4-E4B-v1：4B 模型给 ASR 说话人分离「纠错」，Apache-2.0 + GGUF</h3>
+    <p>Google 在 Hugging Face 上架 <code>google/DiarizationLM-Gemma-4-E4B-v1</code>（2026-10-04 创建，Apache-2.0，模型卡注明「非 Google 官方支持产品」）。它不做识别本身，而是对 ASR + 说话人分离的输出做后处理：基于 Gemma 4 E4B，用 rank-256 LoRA 训练后合并，覆盖 Fisher、Callhome、ICSI、AMI 四个经典语料。</p>
+    <p>技术要点是「Locality-Preserving Oracle Supervision」：只教模型修正 1–5 个词的短轮次边界和附和语，长独白则保留声学锚定的说话人，避免多人会议里身份漂移。模型卡报告四个基准上 WDER 均显著下降（如 Callhome 7.74%→4.92%），参数量只有前代 8B 版的一半，并附 Q4_K_M（约 5.3GB）GGUF 可用 llama.cpp 本地跑。对做会议纪要、客服质检的团队，这是一个可以直接插在现有 ASR 管线后面的低成本环节。</p>
+    <p class="sources">来源：<a href="https://huggingface.co/google/DiarizationLM-Gemma-4-E4B-v1" rel="noopener">Hugging Face · google/DiarizationLM-Gemma-4-E4B-v1</a> · <a href="https://github.com/google/speaker-id/tree/master/DiarizationLM" rel="noopener">GitHub · google/speaker-id DiarizationLM</a></p>
+  </article>
+
+  <div class="section"><h2>工具 Tools</h2></div>
+
+  <article>
+    <h3><span class="tag tools">工具</span>DeepSeek Harness v0.2.1-alpha.1：实验性兼容 Claude Code Mods，「一切皆插件」</h3>
+    <p>据 IT之家 10 月 4 日报道，DeepSeek Harness（DSH，DeepSeek 的开源 Agent 桌面框架）在 v0.2.1-alpha.1 中加入了 Claude Code Mods 兼容层。作者崔添翼说明，这是 alpha 版实验功能，目的是验证 Claude Code Mods 给插件作者的扩展能力是否大致是 DSH 插件架构的一个子集，目前还不能让所有 Mods 无缝运行。</p>
+    <p>同期桌面端新增插件管理页，输入 npm 包名即可安装、停用、卸载插件；官方口径约 60% 的 DSH 用户在用第三方插件，并计划建官方插件市场。对构建者：Agent harness 之间的插件/扩展格式正在互相兼容，写插件时尽量少依赖某一家的私有钩子，迁移成本会低很多。</p>
+    <p class="sources">来源：<a href="https://www.ithome.com/1/009/701.htm" rel="noopener">IT之家 · DeepSeek Harness 崔添翼回应（2026-10-04）</a></p>

@@ -1,0 +1,18 @@
+    border-top: 1px solid var(--border);
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+  @media (max-width: 480px) {
+    .wrap { padding: 1.1rem 0.9rem 2.5rem; }
+    h1 { font-size: 1.3rem; }
+    article { padding: 0.95rem 1rem; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="eyebrow">AI Daily · Asia/Shanghai</p>
+    <h1>AI 技术热点日报 · 2026-10-05</h1>
+    <p class="intro" style="margin-top:0.65rem;font-size:0.85rem;">最新日报 · <a href="archive/" style="color:var(--accent);text-decoration:none;">查看归档 Archive</a></p>
+    <p class="intro">国庆周末偏安静，过去约 24 小时的主线是「小而专的开源模型 + Agent 训练的代价」：Google 放出 4B 说话人分离纠错模型，DeepSeek Harness 试做 Claude Code Mods 兼容；研究侧两篇论文分别量化 RL 后训练的「覆盖率税」和跨模型族 KV 复用；产业侧则是 AI 垃圾报告压垮 Google 开源漏洞赏金、白宫成立「Super Intelligence Force」。</p>

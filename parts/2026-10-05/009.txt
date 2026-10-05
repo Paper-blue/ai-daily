@@ -1,0 +1,18 @@
+  </article>
+
+  <div class="section"><h2>研究 Research</h2></div>
+
+  <article>
+    <h3><span class="tag research">研究</span>Sharpening Tax：RL 后训练让 Agent pass@1 变高，却让 pass@K 覆盖率变低</h3>
+    <p>论文 <code>arXiv:2610.01509</code>（10-01，HF Daily Papers 当日高票）在 4 个模型族、14 对 base/后训练模型、3 个 Agent 基准共 42 种设置上发现：只配一个轻量推理 harness 的预训练模型，单次准确率低得多，但在足够采样预算下 pass@K 常常反超后训练版本。机制上，后训练把任务推向「总能解」和「永远解不了」两极，提升了一致性，却牺牲了解的多样性。</p>
+    <p>作者提出 Sharpening Tax 指标，用少量 rollout 就能估出后训练损失了多少测试时扩展能力；并给出即插即用的 PTGS 采样器，按每道题的估计难度调温度，RL 训练时税更低、pass@1 也更高。对构建者：如果线上用 best-of-N 或多次重试，选模型时别只看 pass@1，base 模型或温度策略可能更划算。</p>
+    <p class="sources">来源：<a href="https://arxiv.org/abs/2610.01509" rel="noopener">arXiv:2610.01509</a> · <a href="https://huggingface.co/papers/2610.01509" rel="noopener">Hugging Face Papers</a></p>
+  </article>
+
+  <article>
+    <h3><span class="tag research">研究</span>HeteroFold：不同模型族之间直接传 KV Cache，多 Agent 系统省掉重复 prefill</h3>
+    <p>多 Agent 系统常混用不同家的模型，用文本通信时接收方得把发送方已经读过的上下文重新 prefill 一遍。<code>arXiv:2609.32259</code> 提出 HeteroFold：发送方和接收方都冻结，先对齐层结构，再把发送方 KV 映射到接收方空间并校准，处理了分词、层数和表征都不同的问题。</p>
+    <p>论文报告在 6 个传输方向、4 个长上下文基准上取得同类最好结果，多 Agent 基准上与文本通信持平；32K 上下文时 Llama-3.1-8B→Ministral-3-14B 比原生 prefill 快约 10.7 倍，比 Dense Latent、KV Ridge 等无 prefill 基线快 1.18–1.47 倍。对构建者：长上下文多 Agent 编排的延迟大头在重复 prefill，这类方法值得关注，但目前仍是论文级结果。</p>
+    <p class="sources">来源：<a href="https://arxiv.org/abs/2609.32259" rel="noopener">arXiv:2609.32259</a> · <a href="https://huggingface.co/papers/2609.32259" rel="noopener">Hugging Face Papers</a></p>
+  </article>
+

@@ -1,0 +1,18 @@
+  <article>
+    <h3><span class="tag research">研究</span>蒸馏里 on-policy 不一定更好：KL 方向和学习率才是关键变量</h3>
+    <p><code>arXiv:2609.35259</code>（van der Schaar 组）在 Llama3 与 Qwen2.5 上做受控的强到弱蒸馏，分别改 rollout 策略、token 级 KL 方向和学习率。结论是 rollout 策略未必起核心作用：KL 方向更明显地决定任务表现和输出覆盖，学习率主导遗忘和更新稀疏度；forward KL 对 rollout 策略很稳健，reverse KL 则更敏感、偏好学生自己生成的 rollout。</p>
+    <p>on-policy 数据在更难的 Countdown 变体上确实提升泛化，但经过后续 RLVR 后这一优势并不稳定。对构建者：做小模型蒸馏时，先调 KL 方向和学习率，比盲目上昂贵的 on-policy 采样更值得。</p>
+    <p class="sources">来源：<a href="https://arxiv.org/abs/2609.35259" rel="noopener">arXiv:2609.35259</a> · <a href="https://huggingface.co/papers/2609.35259" rel="noopener">Hugging Face Papers</a></p>
+  </article>
+
+  <div class="section"><h2>产业与政策 Industry / Policy</h2></div>
+
+  <article>
+    <h3><span class="tag industry">产业</span>AI 自动提交泛滥：Google 暂停开源软件漏洞赏金计划至 2027 年</h3>
+    <p>TechCrunch（10-04）报道，Google Open Source Software Vulnerability Rewards Program 已于 10 月 1 日暂停，承诺 2027 年第一季度给出更新。Google 的说法是「自动化提交大幅增加，其中绝大多数无效」；据 Tom's Hardware，工程师和开源维护者被大量无效或含幻觉的报告淹没。</p>
+    <p>对构建者：用 Agent 做漏洞挖掘的门槛降了，但验证成本全压到了维护者身上。如果你在跑自动化安全扫描，提交前一定要附可复现的 PoC 并人工复核，否则会被越来越多项目直接拒收。</p>
+    <p class="sources">来源：<a href="https://techcrunch.com/2026/10/04/google-froze-its-open-source-bug-bounty-program-due-to-a-significant-rise-in-ai-submissions/" rel="noopener">TechCrunch · Google froze its OSS bug bounty（2026-10-04）</a></p>
+  </article>
+
+  <article>
+    <h3><span class="tag industry">政策</span>白宫成立「Super Intelligence Force」：Jay Clayton 牵头，120 天内交 AI 风险与机遇报告</h3>

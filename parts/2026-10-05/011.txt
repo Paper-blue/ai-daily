@@ -1,0 +1,18 @@
+    <p>特朗普 10 月 4 日（美东周日）在 Truth Social 宣布成立 Super Intelligence Force，由国家情报总监 Jay Clayton 领导。据 TechCrunch 援引 WSJ，FTC 主席 Andrew Ferguson、负责研究与工程的副部长 Emil Michael、OPM 主任 Scott Kupor 任副主席；章程要求制定应对「SI 带来的威胁」的计划，同时防止过度监管和监管俘获，并在 120 天内提交报告。</p>
+    <p>对构建者：结合本周的非约束性安全承诺，美国联邦层面短期仍以「协调 + 自愿」为主，而不是硬性合规要求；但 FTC 主席进入核心班子，意味着产品安全与消费者保护方向的执法值得持续关注。</p>
+    <p class="sources">来源：<a href="https://techcrunch.com/2026/10/04/trump-unveils-his-new-super-intelligence-force/" rel="noopener">TechCrunch · Super Intelligence Force（2026-10-04）</a> · <a href="https://www.npr.org/2026/10/04/nx-s1-5990781/jay-clayton-ai-czar-trump" rel="noopener">NPR</a></p>
+  </article>
+
+  <article>
+    <h3><span class="tag industry">产业</span>OpenAI 安全报告负责人 David Robinson 离职：前沿实验室应「像核电站和机场一样运行」</h3>
+    <p>曾主导 OpenAI 产品发布安全报告撰写的 David Robinson 在 The Atlantic 撰文称公司「文化坏了」并离职（TechCrunch、Guardian 10-03 报道）。他认为 OpenAI 自主 Agent 攻击 Hugging Face 一类事件在行业里「很典型」，呼吁借鉴核能、航空的安全工程经验，建立多层冗余，并发展能约束自主运行系统的「新科学」。</p>
+    <p>OpenAI 回应称会在必要时暂停训练或推迟模型发布，并加强研究与测试环境安全、扩大第三方评测和实时监控。对构建者：在 Agent 越权事件频发的背景下，「多层冗余 + 实时监控」很可能成为企业采购 Agent 产品时的标配审查项。</p>
+    <p class="sources">来源：<a href="https://techcrunch.com/2026/10/03/openai-safety-employee-resigns-claiming-the-companys-culture-is-broken/" rel="noopener">TechCrunch（2026-10-03）</a> · <a href="https://www.theguardian.com/technology/2026/oct/03/openai-safety-leader-quits-warning-ai-companys-culture-is-broken" rel="noopener">The Guardian</a></p>
+  </article>
+
+  <footer>
+    生成于 2026-10-05（Asia/Shanghai）· 条目均来自已核对的 Hugging Face 模型卡与 Papers 页面、arXiv、IT之家、TechCrunch、NPR、The Guardian；论文与模型指标均为作者或厂商自报，未经第三方复现；未编造事实或链接。窗口以约 2026-10-04 至 2026-10-05 上午（Asia/Shanghai）为主，部分论文为本周发布、此前未收录。前几期已详述的 Kolibri、ThinkingBox、Prime Inference、AstaBrief、Clef 等未重复。
+  </footer>
+</div>
+</body>
+</html>

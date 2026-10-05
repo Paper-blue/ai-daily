@@ -1,0 +1,18 @@
+  }
+  .intro {
+    color: var(--muted);
+    margin: 0;
+    font-size: 0.95rem;
+  }
+  .section {
+    margin: 1.75rem 0 0.75rem;
+  }
+  .section h2 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+    margin: 0;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--border);
+  }
