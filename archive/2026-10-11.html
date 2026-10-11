@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 技术热点日报 · 2026-10-11</title>
+<style>
+  :root {
+    --bg: #0f1419;
+    --surface: #1a2332;
+    --surface2: #243044;
+    --text: #e7ecf3;
+    --muted: #9aa8bc;
+    --accent: #5b9fd4;
+    --accent2: #7ec8a3;
+    --border: #2d3a4d;
+    --tag-models: #5b9fd4;
+    --tag-research: #c9a45c;
+    --tag-tools: #7ec8a3;
+    --tag-industry: #c97b9b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+      "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    font-size: 16px;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 3rem;
+  }
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  .eyebrow {
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin: 0 0 0.4rem;
+  }
+  h1 {
+    font-size: 1.55rem;
+    font-weight: 700;
+    margin: 0 0 0.75rem;
+    line-height: 1.3;
+  }
+  .intro {
+    color: var(--muted);
+    margin: 0;
+    font-size: 0.95rem;
+  }
+  .section {
+    margin: 1.75rem 0 0.75rem;
+  }
+  .section h2 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+    margin: 0;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--border);
+  }
+  article {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.1rem 1.15rem;
+    margin: 0.85rem 0;
+  }
+  article h3 {
+    font-size: 1.05rem;
+    font-weight: 650;
+    margin: 0 0 0.65rem;
+    line-height: 1.4;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding: 0.12rem 0.45rem;
+    border-radius: 4px;
+    color: #0f1419;
+    margin-right: 0.4rem;
+    vertical-align: middle;
+  }
+  .tag.models { background: var(--tag-models); }
+  .tag.research { background: var(--tag-research); }
+  .tag.tools { background: var(--tag-tools); }
+  .tag.industry { background: var(--tag-industry); }
+  article p {
+    margin: 0 0 0.65rem;
+    color: var(--text);
+    font-size: 0.92rem;
+  }
+  article p:last-of-type { margin-bottom: 0.5rem; }
+  .sources {
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  .sources a {
+    color: var(--accent);
+    text-decoration: none;
+    word-break: break-all;
+  }
+  .sources a:hover { text-decoration: underline; }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.85em;
+    background: var(--surface2);
+    padding: 0.1em 0.35em;
+    border-radius: 4px;
+  }
+  footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+  @media (max-width: 480px) {
+    .wrap { padding: 1.1rem 0.9rem 2.5rem; }
+    h1 { font-size: 1.3rem; }
+    article { padding: 0.95rem 1rem; }
+  }
+</style>
+<style>.tag.safety { background: #d98c6a; }</style>
+<style>.tag.policy { background: #d98c6a; }</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="eyebrow">AI Daily · Asia/Shanghai</p>
+    <h1>AI 技术热点日报 · 2026-10-11</h1>
+    <p class="intro" style="margin-top:0.65rem;font-size:0.85rem;">最新日报 · <a href="./" style="color:var(--accent);text-decoration:none;">查看归档 Archive</a></p>
+    <p class="intro">周末窗口新闻偏少，主线是「给 Agent 装上判断和编排层」：微软发布只打分、不生成文本的 Microsoft-Decision-1，Nace 开源同类的 Drex v1.5；Anthropic 让 Managed Agents 自己写多 Agent 工作流，Google 推出企业级 Gemini agent。另有清华深研院开源「外部验证才准提交」的 VeriLoop E2，一篇论文证明跨模态对齐可以完全不用配对数据，以及 26 位学者提出用「只能推理的芯片」来硬性暂停前沿训练。</p>
+  </header>
+
+  <div class="section"><h2>模型 Models</h2></div>
+
+  <article>
+    <h3><span class="tag models">模型</span>决策模型再添两员：微软 Microsoft-Decision-1 进 Foundry，Nace 开源 9B 的 Drex v1.5</h3>
+    <p>微软 10 月 9 日发布 Microsoft-Decision-1：在 Qwen3.5-9B 上后训练，给定一组固定选项，一次前向就返回每个选项的校准概率，支持是非题、多选、打分和按 rubric 评判 Agent 动作，不生成解释、只收文本，上下文 32K。微软称在 36 个训练时未见过的基准（近 15 万题）上准确率最高，P50 延迟约为 GPT-6 Sol 的 1/35；把同一请求做 8 种改写扰动，平均只有 1.3% 会改变判断，打乱选项顺序时零翻转。已上线 Foundry 和 OpenRouter，输入每百万 token $0.042，输出免费；微软表示之后会换到 MAI 和 OpenAI 的模型上重训。</p>
+    <p>同一周，Nace.AI 在 Hugging Face 放出 Drex v1.5（约 9B，基于 MiMo-V2.6-Distill-Qwen-9B，Open RAIL-M 许可），兼容 TypeSafe 的 <code>/v1/systemone</code> 接口，自报在公开 Decision Index 0.3.1 上得 58.08，是 10B 以下最高，与闭源 Jev 1.13.0（57.96）处于同一误差带；Q8_0 GGUF 约 9.5 GB，可在 Apple 芯片或 CPU 上跑。对构建者：路由、审核、Agent 动作把关这类高频判断，现在有了便宜的托管和可自部署两条路，但分数都是厂商自测，上线前要用自己的数据检查置信度是否真的校准。</p>
+    <p class="sources">来源：<a href="https://commandline.microsoft.com/microsoft-decision-1-model-foundry/" rel="noopener">Microsoft 官方博客（2026-10-09）</a> · <a href="https://learn.microsoft.com/en-us/azure/foundry/foundry-models/how-to/use-foundry-models-microsoft-decision" rel="noopener">Microsoft Learn 文档</a> · <a href="https://www.theregister.com/ai-and-ml/2026/10/10/microsoft-leans-on-open-weight-model-from-chinese-ai-lab-to-challenge-jev/5302473" rel="noopener">The Register</a> · <a href="https://huggingface.co/nace-ai/drex-v1.5" rel="noopener">Hugging Face · nace-ai/drex-v1.5</a></p>
+  </article>
+
+  <article>
+    <h3><span class="tag models">模型</span>VeriLoop E2：清华深研院开源 27B 推理模型，「模型只提议，外部验证器决定能不能提交」</h3>
+    <p>清华大学深圳国际研究生院机器人实验室以 Apache 2.0 发布 VeriLoop E2，基于 Qwen3.8-27B 后训练，面向代码、数学和物理，原生上下文 262K。核心机制叫 VeriLoop-Governed Recurrence（VGR）：模型负责提出候选、诊断和重新规划，外部的确定性验证器负责判断；只有在受保护的证据指标「不退步且至少一项严格变好」时才提交新状态，否则回滚到上一个已验证状态。</p>
+    <p>团队同时放出从 BF16 到 IQ1_M 的完整 GGUF 量化梯度和逐题评测证据数据集，自报 SWE-bench Pro 76.2%。需要注意的是，论文里用的生产级 harness 没有开源，部分 Agent 类分数依赖这个 harness，单独跑权重未必能复现。对构建者：「提交权交给验证器」这条规则本身很容易套到自己的测试或校验器上，比只看模型自报的推理过程更可靠。</p>
+    <p class="sources">来源：<a href="https://discuss.huggingface.co/t/veriloop-e2-release-27b-post-trained-model-and-full-gguf-precision-ladder-from-bf16-to-iq1-m/180723" rel="noopener">Hugging Face 论坛发布帖</a> · <a href="https://huggingface.co/tsinghua-sigs-robot-lab/VeriLoop-E2" rel="noopener">Hugging Face 模型页</a> · <a href="https://huggingface.co/datasets/tsinghua-sigs-robot-lab/VeriLoop-E2-Evaluation-Evidence" rel="noopener">评测证据数据集</a></p>
+  </article>
+
+  <article>
+    <h3><span class="tag models">模型</span>HeyGen Voice：HeyGen 首个自研 TTS 模型，登上 Artificial Analysis 声音克隆榜第一</h3>
+    <p>数字人公司 HeyGen 10 月 9 日发布自研语音模型 HeyGen Voice，首发即排在 Artificial Analysis 的 Controlled Voice（声音克隆）盲测榜第一。它和 HeyGen 的 Avatar V 数字人模型在同一套技术栈里，形象和声音来自同一处，平台和 API 内免费使用；另有每月 $99 的专业声音克隆附加项，需要本人明确授权，用 30 分钟到 3 小时的录音训练。</p>
+    <p>官方材料是付费新闻稿，没有给出架构或延迟细节。对构建者：做视频或配音产品时，克隆音质的头部差距正在缩小，选型时值得同时看授权与防冒用机制，而不只看榜单排名。</p>
+    <p class="sources">来源：<a href="https://www.prnewswire.com/news-releases/heygen-launches-heygen-voice-debuting-at-1-on-artificial-analysis-leaderboard-302903718.html" rel="noopener">PR Newswire（2026-10-09）</a> · <a href="https://artificialanalysis.ai/text-to-speech/leaderboard/controlled-voice" rel="noopener">Artificial Analysis 榜单</a></p>
+  </article>
+
+  <div class="section"><h2>工具与平台 Tools</h2></div>
+
+  <article>
+    <h3><span class="tag tools">工具</span>Claude Managed Agents 支持「动态工作流」：Agent 自己写程序，分阶段调度多个 Agent 再汇总</h3>
+    <p>Anthropic 10 月 9 日在 Claude 平台更新中加入动态工作流（beta）：遇到「审阅几百份文档」这类可拆分的大任务，Agent 可以写出一个工作流程序，分阶段并行跑许多子 Agent，再合并结果，并在后台运行。开启方式是在 Managed Agents 的 multiagent 配置里打开 workflows，并带上 <code>managed-agents-2026-04-01</code> beta 头。</p>
+    <p>同一批更新里还有两点和安全相关：受限网络的云环境，其 <code>allowed_hosts</code> 现在也作用于 web_search 和 web_fetch；SDK 新增 browser use / computer use 工具类，开发者接自己的自动化后端，由 SDK 负责工具循环、URL 策略和审批回调。对构建者：编排逻辑从「人写死」变成「模型现写」，更需要提前把网络边界和审批点配好，这也正好呼应昨天日报里 Anthropic 的越界行为报告。</p>
+    <p class="sources">来源：<a href="https://platform.claude.com/docs/en/managed-agents/multiagent-orchestration" rel="noopener">Claude 平台文档 · Multiagent orchestration</a> · <a href="https://releases.fru.dev/releases/claude-platform-2026-10-09-you-can-now-let-a-claude-managed-agents-agent-use-dynamic-workflows-in-b" rel="noopener">Claude 平台更新记录汇总（2026-10-09）</a></p>
+  </article>
+
+  <article>
+    <h3><span class="tag tools">工具</span>Google Cloud 推出 Gemini agent：一个能跨 Workspace、Microsoft 365、Slack 干活的企业 Agent</h3>
+    <p>在 10 月 8 日的 Gemini at Work 2026 上，Google Cloud 发布 Gemini agent，定位是「工作通用 Agent」：给目标而不是步骤，它会规划、调用技能和工具、连接企业系统，把成品交回到文档、邮箱和开发环境里。可以拆出临时子 Agent 并行处理多步任务，也可以建成长期「同事 Agent」，拥有自己的 Workspace 账号、邮箱和日历，在云端持续运行；底层会在 Gemini 和 Anthropic Claude 等模型间按任务路由，并支持按项目设置花费上限。</p>
+    <p>目前是私有预览，官方 FAQ 标明后台多步委派、移动和桌面端、第三方模型选择仍属早期访问，也没有公布 API 规格和价格。对构建者：大厂企业 Agent 都在往「独立身份 + 多模型路由 + 预算闸门」靠拢，自建 Agent 平台可以参考这套治理设计。（10-09 日报未生成，此条为补收。）</p>
+    <p class="sources">来源：<a href="https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-at-work/" rel="noopener">Google 官方博客（2026-10-08）</a> · <a href="https://9to5google.com/2026/10/08/gemini-agent-google-cloud/" rel="noopener">9to5Google</a> · <a href="https://www.techrepublic.com/article/news-google-gemini-agent-workplace-apps/" rel="noopener">TechRepublic</a></p>
+  </article>
+
+  <div class="section"><h2>研究 Research</h2></div>
+
+  <article>
+    <h3><span class="tag research">研究</span>「共享几何就是罗塞塔石碑」：不用任何图文配对，也能把独立训练的视觉和语言模型粗对齐</h3>
+    <p>来自 TUM、ETH、MIT 等机构的论文（Phillip Isola 参与）检验「柏拉图表示假说」的一个强推论：如果不同模态的模型会收敛到相似的表示几何，那对齐时还需要配对数据吗？作者用 Wasserstein Procrustes 方法，先分别聚类两个嵌入空间、按 CKA 匹配簇中心得到粗对应，再交替做样本匹配和正交映射更新，全程不看一对图文。</p>
+    <p>在 7 个视觉模型、3 个语言模型上，平均 FOSCTTM 从此前方法的 0.223 降到 0.154（0.5 为随机）；不用任何分类数据，CIFAR-10 零样本 Top-1 平均 47.4%。两个空间的 CKA 相似度能很好地预测对齐是否会成功，规律在生物、医学、神经科学等 7 个领域都成立；只给 20 对样本时误差比最强基线低 14 到 28 倍。对构建者：配对数据稀缺的新模态（科学数据、传感器）可以先用这种几何方法打底，再用很少的标注样本精修。</p>
+    <p class="sources">来源：<a href="https://arxiv.org/abs/2610.09411" rel="noopener">arXiv 2610.09411</a> · <a href="https://dominik-schnaus.github.io/unpaired-rosetta/" rel="noopener">项目主页</a></p>
+  </article>
+
+  <div class="section"><h2>政策 Policy</h2></div>
+
+  <article>
+    <h3><span class="tag policy">政策</span>26 位学者发布 200 页报告：用「只能推理、不能训练」的芯片，硬性暂停前沿 AI 训练至少十年</h3>
+    <p>UC Berkeley 的 Will Fithian、Wesley Holliday 牵头，Stuart Russell、Barry Eichengreen 及普林斯顿、斯坦福、哈佛、牛津等校学者参与，10 月 9 日发布《The Feasibility of a Hardwired Pause of Frontier AI Training》。方案核心是利用高度集中的芯片供应链：停产可训练的 AI 芯片，逐步用硬件层面就限制了训练能力的「仅推理芯片」替换存量，让现有模型继续提供服务，同时配套国际互查机制，防止暗中训练或公开毁约。</p>
+    <p>报告认为如果各国愿意合作、交出或转移暂停前的存量芯片，这种暂停「现在或很快」就可行，主要风险是隐蔽规避、公开突破，以及训练效率提升带来的绕过。这是学术提案，不是政策，但它把「暂停」从口号推到了芯片设计和验证机制的层面，值得关注推理专用芯片方向的人留意。</p>
+    <p class="sources">来源：<a href="https://news.berkeley.edu/2026/10/09/a-global-hardwired-pause-of-frontier-ai-training-is-feasible-says-new-report/" rel="noopener">Berkeley News（2026-10-09）</a> · <a href="https://hardwired-pause.ai/" rel="noopener">报告主页 hardwired-pause.ai</a></p>
+  </article>
+
+  <footer>
+    生成于 2026-10-11（Asia/Shanghai）· 条目来自已核对的 Microsoft、Google、Anthropic 官方页面与文档，Hugging Face 模型页与论坛帖，arXiv 论文，以及 Berkeley News、The Register、9to5Google、TechRepublic、PR Newswire 的报道；模型与论文指标均为厂商或作者自报，未经第三方复现；未编造事实或链接。窗口以约 2026-10-10 上午至 2026-10-11 上午（Asia/Shanghai）为主，正值周末，新发布较少；Gemini agent（10-08）因 10-09 日报缺失而补收。X 上热议的 Qwen4-27B / Qwen4-Max 开源预告目前只有预热、无正式发布，OpenAI 722 篇数学论文争议（10-07 日报已收录）、Qwen-Image-2.1-Turbo 与 Underdog Saluki（10-10 日报已收录）不重复收录。
+  </footer>
+</div>
+</body>
+</html>
