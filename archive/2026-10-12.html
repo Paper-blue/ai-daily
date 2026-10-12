@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 技术热点日报 · 2026-10-12</title>
+<style>
+  :root {
+    --bg: #0f1419;
+    --surface: #1a2332;
+    --surface2: #243044;
+    --text: #e7ecf3;
+    --muted: #9aa8bc;
+    --accent: #5b9fd4;
+    --accent2: #7ec8a3;
+    --border: #2d3a4d;
+    --tag-models: #5b9fd4;
+    --tag-research: #c9a45c;
+    --tag-tools: #7ec8a3;
+    --tag-industry: #c97b9b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+      "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    font-size: 16px;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 3rem;
+  }
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  .eyebrow {
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin: 0 0 0.4rem;
+  }
+  h1 {
+    font-size: 1.55rem;
+    font-weight: 700;
+    margin: 0 0 0.75rem;
+    line-height: 1.3;
+  }
+  .intro {
+    color: var(--muted);
+    margin: 0;
+    font-size: 0.95rem;
+  }
+  .section {
+    margin: 1.75rem 0 0.75rem;
+  }
+  .section h2 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+    margin: 0;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--border);
+  }
+  article {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.1rem 1.15rem;
+    margin: 0.85rem 0;
+  }
+  article h3 {
+    font-size: 1.05rem;
+    font-weight: 650;
+    margin: 0 0 0.65rem;
+    line-height: 1.4;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding: 0.12rem 0.45rem;
+    border-radius: 4px;
+    color: #0f1419;
+    margin-right: 0.4rem;
+    vertical-align: middle;
+  }
+  .tag.models { background: var(--tag-models); }
+  .tag.research { background: var(--tag-research); }
+  .tag.tools { background: var(--tag-tools); }
+  .tag.industry { background: var(--tag-industry); }
+  article p {
+    margin: 0 0 0.65rem;
+    color: var(--text);
+    font-size: 0.92rem;
+  }
+  article p:last-of-type { margin-bottom: 0.5rem; }
+  .sources {
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  .sources a {
+    color: var(--accent);
+    text-decoration: none;
+    word-break: break-all;
+  }
+  .sources a:hover { text-decoration: underline; }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.85em;
+    background: var(--surface2);
+    padding: 0.1em 0.35em;
+    border-radius: 4px;
+  }
+  footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+  @media (max-width: 480px) {
+    .wrap { padding: 1.1rem 0.9rem 2.5rem; }
+    h1 { font-size: 1.3rem; }
+    article { padding: 0.95rem 1rem; }
+  }
+</style>
+<style>.tag.safety { background: #d98c6a; }</style>
+<style>.tag.policy { background: #d98c6a; }</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="eyebrow">AI Daily · Asia/Shanghai</p>
+    <h1>AI 技术热点日报 · 2026-10-12</h1>
+    <p class="intro" style="margin-top:0.65rem;font-size:0.85rem;">最新日报 · <a href="./" style="color:var(--accent);text-decoration:none;">查看归档 Archive</a></p>
+    <p class="intro">周末窗口没有大厂重磅发布，主线是「让模型少算、算在该算的地方」：Amazon 的 ALoDLM 和一篇 LLoCoT 论文用循环代替逐字思考，RACE 教 Agent 判断哪一步不必再想；决策模型继续扩张，vLLM-SR 一口气放出 6 个多模态 Decision 3.0，322M 的 THX-01 主打手机可跑。另有 Odyssey-3 世界模型开放免费试用、MBZUAI 的 WorldGuide 让视频模型自己规划下一步，以及社区团队把 7B 模型的注意力整体换掉的 Moti-1。</p>
+  </header>
+
+  <div class="section"><h2>模型 Models</h2></div>
+
+  <article>
+    <h3><span class="tag models">模型</span>Odyssey-3 世界模型开放免费试用：实时生成可交互环境，Physics-IQ 自报第一</h3>
+    <p>加州公司 Odyssey 10 月 8 日发布 Odyssey-3，并开放免费的公开研究预览（网页里跑的是轻量版 Odyssey-3 Flash），周末被 The Decoder 等媒体集中报道。它是一个自回归扩散 Transformer：根据提示词生成环境，再根据用户或 Agent 的动作实时预测环境怎么变化，预览里支持第一人称、第三人称导航和独立相机。训练数据混合了带事件标注的网络视频、带键鼠输入对齐的游戏录像和刚体物理仿真，最后用分布匹配加对抗蒸馏得到可实时交互的少步模型。</p>
+    <p>官方称 Odyssey-3 Pro 在 Physics-IQ Verified 视频续写上得 66.1，为榜上最高；WorldMark 四个类别中三项第一（按其自测口径）。机器人臂、人形机器人、印度真实道路驾驶（冻结主干、只用 20 小时驾驶数据训练策略）等都是研究演示，不在浏览器预览里，API 需要联系申请。对构建者：世界模型正从「看起来像」转向「物理上对不对」，但基准分数是厂商自测，值得用自己的场景亲手试。</p>
+    <p class="sources">来源：<a href="https://odyssey.systems/meet-odyssey-3" rel="noopener">Odyssey 官方博客（2026-10-08）</a> · <a href="https://the-decoder.com/odyssey-3-is-a-new-generative-world-model-that-you-can-try-for-free/" rel="noopener">The Decoder（2026-10-11）</a></p>
+  </article>
+
+  <article>
+    <h3><span class="tag models">模型</span>决策模型再扩张：vLLM-SR 放出 6 个多模态 Decision 3.0，322M 的 THX-01 主打手机端</h3>
+    <p>vLLM Semantic Router 团队 10 月 10 日在 Hugging Face 的 <code>vllm-sr</code> 组织下上传 Decision 3.0 系列 6 个检查点（d3、d3-flash、d3-mini、d3-nano、d3-lite、d3-edge），从约 0.6B 到 26B，基于 Qwen3.5 / Qwen3.8 主干，Apache-2.0。它们对选择、是非、打分类问题直接返回每个选项的概率，不做解码；和上一代相比，6 个里有 5 个能读图片和视频。模型卡自报 d3 在其维护的 Jev Decision Index 0.3.1 上得 64.7，在 MI325X 上文本请求中位延迟 55 ms。目前只有权重和模型卡，正式发布说明还没出，也没有公布校准误差。</p>
+    <p>同日，阿塞拜疆的 HAL-X AI 发布 THX-01：mmBERT-base 编码器加决策头，共 322M 参数，Apache 2.0，一次前向约 10 ms，除了选择和打分还能抽取数字、原文片段和引用证据，并提供免费限额 API。它自报在 2,843 条多语言工单上准确率 98.4%、ECE 0.003，略好于 Jev 1.13，但对比是本地 GPU 对远程 API，延迟不可直接比较。对构建者：路由和审核这类判断层的选择越来越多，接口也都在向同一套 System One 请求格式靠拢，换模型的成本在下降；但请先用自己的数据检查概率是否校准。</p>
+    <p class="sources">来源：<a href="https://huggingface.co/vllm-sr/d3" rel="noopener">Hugging Face · vllm-sr/d3</a> · <a href="https://www.orcarouter.ai/zh-CN/blog/decision-3-0-open-multimodal-decision-models" rel="noopener">OrcaRouter 解读（2026-10-11）</a> · <a href="https://huggingface.co/blog/doofz/thx-01-we-open-sourced-a-322m-decision-model-that" rel="noopener">THX-01 发布博客（2026-10-10）</a> · <a href="https://huggingface.co/doofz/THX-01" rel="noopener">Hugging Face · doofz/THX-01</a></p>
+  </article>
+
+  <article>
+    <h3><span class="tag models">模型</span>Moti-1（摩谛）：把 Qwen2.5-7B 的自注意力整体换成「跨层波前注意力」，让浅层直接读深层 KV</h3>
+    <p>「小思框架」团队 10 月 11 日在 ModelScope 开源 Moti-1-7B：保留 Qwen2.5-7B-Instruct 的 FFN 和 Embedding，把每层自注意力整体替换为自研的 RCA。序列切成 64 token 的块，按「块 0 跑完所有层，再跑块 1」的顺序推进，于是浅层处理新块时，可以直接回读更深层对旧块算好的 KV；三组 key 在同一次 softmax 里竞争，团队的消融显示，用门控插值的保守版本反而比原版差。</p>
+    <p>团队自评的 6 个领域（每个领域 3 题、云端模型做评委）均分 43.2 对原版 38.1，前端页面生成高出 24.7 分，但古诗和日常问答明显变差，样本量也很小。最实用的一点是工程坑：RCA 分支权重若用 bf16，SDPA 会落到 cuDNN 的慢路径，单层慢约 17 倍，所以发布版用 fp32 存这部分，显存约 18.6 GB。对构建者：这类改架构实验还很早期，但「自定义 mask 加单 query 长 KV 要实测各个 SDPA 后端」这条经验可以直接拿去用。</p>
+    <p class="sources">来源：<a href="https://developer.aliyun.com/article/1769653" rel="noopener">阿里云开发者社区发布文（2026-10-11）</a> · <a href="https://modelscope.cn/models/ericsjq/Moti-1-7B" rel="noopener">ModelScope · Moti-1-7B</a></p>
+  </article>
+
+  <div class="section"><h2>研究 Research</h2></div>
+
+  <article>
+    <h3><span class="tag research">研究</span>用「循环」代替逐字思考：Amazon ALoDLM 让难的 token 多算几遍，LLoCoT 把思维链压成并行的潜变量</h3>
+    <p>Amazon AGI 的 ALoDLM（arXiv 2610.04198，1.7B / 8B 权重已上 Hugging Face，CC-BY-NC-4.0，仅限研究）是一种扩散语言模型：每个去噪步骤内，一组共享层最多循环 4 次，有把握的 token 先确定，没把握的保留隐状态继续算，算多少由模型自己学。从 Qwen3 直接 SFT（5B token）得到，11 个基准平均分 8B 为 80.3，高于 Qwen3-8B 的 78.5；在 GSM8K 上吞吐约为 vLLM 部署的 Qwen3-8B 的 2.7 倍。</p>
+    <p>另一篇论文 LLoCoT（arXiv 2610.11472）用循环 Transformer 反复细化一小块「潜在工作区」，代替逐个 token 生成思维链，在 HumanEval 和 MBPP 上与显式思维链 SFT 准确率持平，首个答案 token 的等待时间缩短约 36 倍。两项工作都是作者自测、规模不大，但方向一致：把计算花在难的地方，而不是给每个 token 一样的深度。</p>
+    <p class="sources">来源：<a href="https://alo-dlm.github.io/" rel="noopener">ALoDLM 项目主页</a> · <a href="https://arxiv.org/abs/2610.04198" rel="noopener">arXiv 2610.04198</a> · <a href="https://arxiv.org/abs/2610.11472" rel="noopener">arXiv 2610.11472（LLoCoT）</a></p>
+  </article>
+
+  <article>
+    <h3><span class="tag research">研究</span>RACE：教 Agent 判断「这一步不用再想」，省推理成本而不掉分</h3>
+    <p>Yiruo Cheng、Ji-Rong Wen、Zhicheng Dou 等作者的论文（arXiv 2610.12061）指出，Agent 通常每一轮动作前都要重新推理，但前几轮的推理往往已经够用。他们发现一个便宜的信号：删掉某一轮推理后，后续参考动作的似然下降多少，能很好地反映这些动作是否还能从之前的推理中「接上」。基于这个信号，RACE 先标出可以省掉的推理轮次，再把它用到 SFT 和 Agent 强化学习里，让策略自己学会何时推理、何时直接行动。</p>
+    <p>作者称在 4 个代表性 Agent 基准上显著降低推理开销，同时任务表现持平或更好。对构建者：长链路 Agent 的成本大头往往是每一轮都在「重新想」，这类按轮次自适应的思路比一刀切地关掉思考更稳妥。</p>
+    <p class="sources">来源：<a href="https://arxiv.org/abs/2610.12061" rel="noopener">arXiv 2610.12061</a></p>
+  </article>
+
+  <article>
+    <h3><span class="tag research">研究</span>WorldGuide：MBZUAI 让视频模型自己决定下一步做什么、什么时候算完成</h3>
+    <p>MBZUAI 的 WorldGuide（arXiv 2610.12459）把「生成一段操作教程视频」变成闭环执行：只给一张初始图片和任务目标，基于 Qwen2.5-VL-7B 的规划器看当前生成的画面，预测下一个原子动作或宣布完成；基于 HunyuanVideo-1.5 的执行器把这个动作渲染成视频片段，再交回规划器。层级视觉记忆让长任务的历史 token 成本保持有界。</p>
+    <p>团队同时发布约 5.9 万条步骤标注视频、覆盖 245 个任务的 WorldGuide-Bench。任务成功率 33.33%，高于拿到参考动作计划的 MiniMax-H3（29.90%）；在 VideoCraft-Bench 上 47.69% 对 32.73%。代码和权重已在 GitHub 与 Hugging Face 公开。对构建者：「规划器加执行器加完成判断」的结构可以直接借鉴到具身和视频 Agent，但绝对成功率仍然偏低。</p>
+    <p class="sources">来源：<a href="https://arxiv.org/abs/2610.12459" rel="noopener">arXiv 2610.12459</a> · <a href="https://github.com/mbzuai-oryx/WorldGuide" rel="noopener">GitHub · mbzuai-oryx/WorldGuide</a> · <a href="https://breakingai.news/mbzuai-worldguide-gives-video-ai-planning-abilities/" rel="noopener">Breaking AI News（2026-10-12）</a></p>
+  </article>
+
+  <footer>
+    生成于 2026-10-12（Asia/Shanghai）· 条目来自已核对的 Odyssey 官方博客、Hugging Face 模型页与博客、ModelScope 与阿里云开发者社区发布文、arXiv 论文与项目主页，以及 The Decoder、OrcaRouter、Breaking AI News 的报道；模型与论文指标均为厂商或作者自报，未经第三方复现；未编造事实或链接。窗口以约 2026-10-11 上午至 2026-10-12 上午（Asia/Shanghai）为主，正值周末，新发布较少，部分本周早些时候发布、此前未收录的条目（Odyssey-3、ALoDLM、arXiv 10-08 论文）一并补收。搜索中出现的 OpenAI 模型逃逸攻击 Hugging Face、Stripe 收购 OpenRouter、平头哥真武 V900 等均为 7 到 9 月的旧闻，Anthropic 暂停内部评测联网已在 10-10 日报收录，均不重复。
+  </footer>
+</div>
+</body>
+</html>
