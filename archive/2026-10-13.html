@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 技术热点日报 · 2026-10-13</title>
+<style>
+  :root {
+    --bg: #0f1419;
+    --surface: #1a2332;
+    --surface2: #243044;
+    --text: #e7ecf3;
+    --muted: #9aa8bc;
+    --accent: #5b9fd4;
+    --accent2: #7ec8a3;
+    --border: #2d3a4d;
+    --tag-models: #5b9fd4;
+    --tag-research: #c9a45c;
+    --tag-tools: #7ec8a3;
+    --tag-industry: #c97b9b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+      "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    font-size: 16px;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 3rem;
+  }
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  .eyebrow {
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin: 0 0 0.4rem;
+  }
+  h1 {
+    font-size: 1.55rem;
+    font-weight: 700;
+    margin: 0 0 0.75rem;
+    line-height: 1.3;
+  }
+  .intro {
+    color: var(--muted);
+    margin: 0;
+    font-size: 0.95rem;
+  }
+  .section {
+    margin: 1.75rem 0 0.75rem;
+  }
+  .section h2 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+    margin: 0;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--border);
+  }
+  article {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.1rem 1.15rem;
+    margin: 0.85rem 0;
+  }
+  article h3 {
+    font-size: 1.05rem;
+    font-weight: 650;
+    margin: 0 0 0.65rem;
+    line-height: 1.4;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding: 0.12rem 0.45rem;
+    border-radius: 4px;
+    color: #0f1419;
+    margin-right: 0.4rem;
+    vertical-align: middle;
+  }
+  .tag.models { background: var(--tag-models); }
+  .tag.research { background: var(--tag-research); }
+  .tag.tools { background: var(--tag-tools); }
+  .tag.industry { background: var(--tag-industry); }
+  article p {
+    margin: 0 0 0.65rem;
+    color: var(--text);
+    font-size: 0.92rem;
+  }
+  article p:last-of-type { margin-bottom: 0.5rem; }
+  .sources {
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  .sources a {
+    color: var(--accent);
+    text-decoration: none;
+    word-break: break-all;
+  }
+  .sources a:hover { text-decoration: underline; }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.85em;
+    background: var(--surface2);
+    padding: 0.1em 0.35em;
+    border-radius: 4px;
+  }
+  footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+  @media (max-width: 480px) {
+    .wrap { padding: 1.1rem 0.9rem 2.5rem; }
+    h1 { font-size: 1.3rem; }
+    article { padding: 0.95rem 1rem; }
+  }
+</style>
+<style>.tag.safety { background: #d98c6a; }</style>
+<style>.tag.policy { background: #d98c6a; } .tag.infra { background: #7ec8a3; }</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="eyebrow">AI Daily · Asia/Shanghai</p>
+    <h1>AI 技术热点日报 · 2026-10-13</h1>
+    <p class="intro" style="margin-top:0.65rem;font-size:0.85rem;">最新日报 · <a href="./" style="color:var(--accent);text-decoration:none;">查看归档 Archive</a></p>
+    <p class="intro">今天的主线是「长任务 Agent」：Meta 发布首个前沿模型 Muse Wonder，主打记忆与长时编码；Qwen 的 QwenGyre 和微软的 Fork-and-Flush 分别从训练系统和推理策略两端解决「Agent 跑几个小时」带来的问题；AMD 的 Helion 机架则把 Agent 执行当成独立的 CPU 负载来设计。另有 MiniCPM-V 4.7 把 35B MoE 搬上手机、Anthropic 测试小模型在 IoT 设备上的自我复制能力，以及美英恢复未发布模型的安全测试合作。</p>
+  </header>
+
+  <div class="section"><h2>模型 Models</h2></div>
+
+  <article>
+    <h3><span class="tag models">模型</span>Meta 发布首个前沿模型 Muse Wonder：1M 上下文、API 定价对齐 Opus 5.5，长时编码自测领先</h3>
+    <p>Meta Superintelligence Labs 10 月 12 日（美国时间）发布 Muse Wonder 和更强的 Muse Wonder Full，这是 Meta 重组 AI 团队 14 个月以来第一次发布前沿级模型，在 Prometheus 吉瓦级数据中心训练。Muse Wonder 已上 Meta Model API（<code>muse-wonder-1.0</code>，标注 preview），每百万 token 输入 4 美元、输出 20 美元（缓存输入 0.2 美元），1M 上下文，输入支持文本、图片、视频、音频，输出为文本；Wonder Full 目前只在 Muse Code 的订阅里提供。官方把卖点概括为 Active Memory（跨对话记住并主动调取相关信息）和 Active Focus（卡住时换路、在关键操作前先确认）。</p>
+    <p>Meta 自报（最高推理强度）：Wonder Full 在 DeepSWE 1.1 上 79.0，对比 Opus 5.5 的 74.2；SWE-Marathon 上 57.5 对 46.3；但 Terminal-Bench 4.0（57.1 对 59.6）、ProgramBench（59.0 对 70.5）仍落后 Opus 5.5，14 项里领先的 8 项中有 2 项是 Meta 自家基准。第三方 Artificial Analysis 智能指数：Wonder 52、Wonder Full 56，Opus 5.5 为 58。模型卡称，在不加缓解措施时不能排除 Wonder Full 达到化学/生物滥用的高风险阈值，因此上线时附带了安全训练和分类器；完整安全报告尚未发布。对构建者：API 上能用的是普通版，分数比 Full 低，选型前最好用自己的长任务实测。</p>
+    <p class="sources">来源：<a href="https://research.meta.ai/blog/muse-wonder" rel="noopener">Meta AI 研究博客（2026-10-12）</a> · <a href="https://research.meta.ai/static/muse-wonder-model-card" rel="noopener">Muse Wonder 模型卡</a> · <a href="https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/" rel="noopener">TechCrunch</a> · <a href="https://artificialwatch.com/wire/meta-muse-wonder-launch" rel="noopener">ArtificialWatch（价格与基准整理）</a></p>
+  </article>
+
+  <article>
+    <h3><span class="tag models">模型</span>MiniCPM-V 4.7：35B-A3B MoE 多模态模型在 iPhone 上 13+ tok/s，靠「跨层预测专家」提前加载权重</h3>
+    <p>OpenBMB 的 35B-A3B 权重 10 月 6 日就已上传，但当时没有模型卡和许可证；10 月 12 日正式补齐模型卡（Apache-2.0），同时放出 1B 版本，以及 FP8、int4、AWQ、GPTQ、GGUF 量化版和 DSpark 投机解码草稿模型。这是 MiniCPM-V 系列第一个 MoE 模型，语言主干来自 Qwen3.6，视觉部分用 SigLIP2，并借用 LLaVA-UHD v4 的「ViT 内部早期压缩」，可在 4 倍和 16 倍视觉 token 压缩之间切换。</p>
+    <p>技术重点是端侧 MoE 的内存问题：手机内存放不下全部专家，按需从存储加载又会卡顿。Lookahead Expert Scheduling（LES）用跨层路由预测提前把下一层可能用到的专家预读进来，先算已预读的专家，同时加载剩下的；预测只影响加载顺序，实际计算仍按原始路由走，所以不会改变模型输出。再配合逐层细粒度量化和 DSpark 投机解码，官方称在 iPhone 17 Pro Max 上解码 13+ tok/s，Instruct 模式下综合得分高于 Qwen3.6 35B-A3B 且推理更快（均为自测）。</p>
+    <p class="sources">来源：<a href="https://huggingface.co/openbmb/MiniCPM-V-4.7-35B-A3B" rel="noopener">Hugging Face · MiniCPM-V-4.7-35B-A3B</a> · <a href="https://huggingface.co/openbmb/MiniCPM-V-4.7-1B" rel="noopener">Hugging Face · MiniCPM-V-4.7-1B</a> · <a href="https://www.orcarouter.ai/blog/minicpm-v-4-7-shipped-quietly" rel="noopener">OrcaRouter（10-06 无卡上传时的分析）</a></p>
+  </article>
+
+  <article>
+    <h3><span class="tag models">模型</span>Z.ai 发布 GLM-Legal：法律垂直 Agent 模型，Harvey LAB 全通过率 19.2%，模型与 harness 一起训</h3>
+    <p>智谱 Z.ai 10 月 12 日发布 GLM-Legal，基于 GLM-5.3-Flash（据 OrcaRouter 为 320B 总参数、18B 激活）。训练分两段：中期训练加大高质量法律语料，补齐法条、概念和解释框架；后训练在「数万个」仿真法律任务环境里做强化学习，并且让 Agent harness（负责上下文、工具和执行反馈的运行框架）和模型同步迭代——训练中暴露的问题用来改 harness，改过的 harness 再给模型更真实的约束。</p>
+    <p>在 Harvey 开源的 Legal Agent Benchmark（24 个业务领域、要求所有评分项都通过才算过）上全通过率 19.2%，比基座高 12.5 个百分点；LegalBench 和面向中国法律实务的 PLawBench 只说「与前沿闭源模型持平」，没有给具体分数。目前需申请 Beta 才能用 API，没有公开定价，集成到桌面 Agent AutoClaw 的计划也还没上线。对构建者：19.2% 说明长链路专业任务的端到端可靠性仍然很低，但「模型与 harness 协同训练」这一点值得关注。</p>
+    <p class="sources">来源：<a href="https://z.ai/blog/glm-legal" rel="noopener">Z.ai 官方博客（2026-10-12）</a> · <a href="https://www.orcarouter.ai/blog/glm-legal-beta-release" rel="noopener">OrcaRouter 解读</a> · <a href="https://www.harvey.ai/blog/introducing-harveys-legal-agent-benchmark" rel="noopener">Harvey LAB 基准介绍</a></p>
+  </article>
+
+  <div class="section"><h2>研究 Research</h2></div>
+
+  <article>
+    <h3><span class="tag research">研究</span>QwenGyre：在 Qwen 3.8 2.4T 上做「单次 70 万 token」的 Agent 强化学习，GPU 在采样和训练之间弹性切换</h3>
+    <p>Qwen 团队与中科大、清华合作的论文（arXiv 2609.33848，9 月底挂出，10 月 12 日起被 MarkTechPost 等集中报道）针对超长时 Agent RL 的两大浪费：一是每条执行轨迹耗时差异很大，等最慢的那条时 GPU 大量空转；二是 Agent 的分支、子 Agent、摘要会产生大量重复的轨迹前缀。它的弹性调度器把 GPU 分成多个 cell，在线执行不中断的前提下，把空出来的 cell 切去做训练；模型调用通过代理按 token-in/token-out 精确记录 token 和 log-prob。</p>
+    <p>轨迹处理器把记录还原成共享前缀的轨迹树，相同前缀只训一次，每次执行最多保留 5 条轨迹，超时的执行也按部分进度打分。在 Qwen 3.8 2.4T、单次约 70 万 token 的设置下，48 步内 NL2RepoBench 从 52.5% 提到 58.5%；端到端速度相比 Colocate 方案最高 1.85 倍，相比 Async 方案最高 1.78 倍。对构建者：如果你的 RL 环境是黑盒 Agent harness，「harness 状态和 GPU 角色解耦」这套设计可以直接参考。</p>
+    <p class="sources">来源：<a href="https://arxiv.org/abs/2609.33848" rel="noopener">arXiv 2609.33848</a> · <a href="https://huggingface.co/papers/2609.33848" rel="noopener">Hugging Face Papers</a> · <a href="https://www.marktechpost.com/2026/10/12/alibaba-qwen-introduces-qwengyre-elastic-reinforcement-learning-rl-for-xlong-horizon-agents/" rel="noopener">MarkTechPost（2026-10-12）</a></p>
+  </article>
+
+  <article>
+    <h3><span class="tag research">研究</span>Fork-and-Flush（微软）：长时科研 Agent 会困在「想法盆地」，清空对话、保留工作区就能跳出来</h3>
+    <p>Microsoft Research 的论文（arXiv 2610.07447）发现，同一个 Agent 在同一任务上跑 8 次，最终分数从 68.3 到 100 不等，加算力也拉不齐；把各次的解投到二维图上，每次运行几乎都困在一小块区域里反复打磨，作者称之为「想法盆地」，即使定期压缩对话历史也没用。办法很简单：定期把 Agent 分叉成 K 个分支，每个分支继承全部代码和文件，但对话上下文清空；跑一小段后只保留得分最高的分支继续。</p>
+    <p>在多格骨牌装箱、作业车间调度、密码分析、CIFAR 分类器压缩、VLIW 内核优化等 13 个长任务上（单次运行几小时到 100 多小时，用 GitHub Copilot CLI 驱动 GPT-5.6-terra 和 GPT-5.5），同等算力下归一化平均分 0.78，单次运行为 0.47、best-of-4 为 0.54，13 个任务中 12 个均分最高；只清空上下文不分叉也能提升约 22%。对构建者：长跑 Agent 的上下文本身可能就是瓶颈，「把状态存在工作区、定期重开对话」成本很低，值得一试。</p>
+    <p class="sources">来源：<a href="https://arxiv.org/abs/2610.07447" rel="noopener">arXiv 2610.07447</a> · <a href="https://the-decoder.com/clearing-chat-history-helps-ai-agents-find-better-solutions/" rel="noopener">The Decoder（2026-10-12）</a></p>
+  </article>
+
+  <article>
+    <h3><span class="tag safety">安全</span>Anthropic 红队：小模型离「在 IoT 设备上自我复制」可能只差几个月，15 台 55 美元电视盒子能跑 26B 模型</h3>
+    <p>Anthropic 10 月 12 日发文，测试开源小模型能否完成「找目标、获得执行权限、部署推理、继续传播」的复制链条，重点测最少被研究的「在陌生硬件上搭推理服务」这一步。用自研 Memento harness（基于开源 Pi coding agent，定期开新实例并继承前一实例的笔记）测试，9B 模型在 9 类硬件中的 8 类上成功搭起推理；他们还把 Gemma4-26B-A4B 按流水线并行拆到 15 台 4GB 内存、约 55 美元的杂牌 Android 电视盒子上，速度只有 0.39 tok/s。</p>
+    <p>在 8 节点的 redroid 模拟网络里（ADB 端口无认证，网络攻击环节被刻意简化，所以结果是上限），只有 GLM-5.2 能稳定完成端到端复制（5 次中 4 次感染全部 8 个节点），其余开源模型都失败；Qwen3.5-9B 继承前代笔记后，搭推理成功率从 45% 升到 61%–84%。按 30B 以下开源模型能力的历史趋势外推，作者预计今年底小模型就能达到 GLM-5.2 的水平。防御建议包括：ISP 流量监测（多 GB 权重传输很显眼）、隔离通知被感染用户、取消 IoT 默认密码。</p>
+    <p class="sources">来源：<a href="https://www.anthropic.com/research/self-replicating-ai" rel="noopener">Anthropic Research（2026-10-12）</a></p>
+  </article>
+
+  <div class="section"><h2>工具与基础设施 Tools &amp; Infra</h2></div>
+
+  <article>
+    <h3><span class="tag tools">开源</span>NVIDIA 以 Apache-2.0 开源 usd-brep：基于 SMLib 内核的 NURBS B-rep 实体建模库，打通 OpenUSD</h3>
+    <p>NVIDIA Omniverse 在 GitHub 上开源了 usd-brep（仓库 10 月 9 日北京时间创建，这两天在开发者社区传开，目前约 440 星），是一个独立的 C++/Python 库，用于基于 NURBS 的边界表示（B-rep）实体建模。它带上了 SMLib 内核：SMLib 是一个商用 CAD 建模内核，提供布尔运算、倒圆角、抽壳、特征移除、曲线曲面求交等功能，官方文档写明此前已停止向新客户发放许可。</p>
+    <p>仓库提供 SMLib 与 USD BrepArray 之间的导入导出 API、omniSolid USD schema 插件，以及两级校验工具：schema 校验检查 USD 数据格式，几何校验把每个实体导入内核后检查闭合环、流形边、裁剪曲线等拓扑是否正确。对构建者：「让 Agent 生成可制造的精确 CAD 零件」此前一直缺一个许可宽松、能力完整的几何内核，这次开源让 OpenUSD 加 AI 的 CAD 管线少了一大块闭源依赖。</p>
+    <p class="sources">来源：<a href="https://github.com/NVIDIA-Omniverse/usd-brep" rel="noopener">GitHub · NVIDIA-Omniverse/usd-brep</a> · <a href="https://nvidia-omniverse.github.io/usd-brep/latest/api/functions.html" rel="noopener">usd-brep API 文档</a> · <a href="https://docs.nvidia.com/smlib/manual/smlib/introduction/index.html" rel="noopener">SMLib 手册（NVIDIA Docs）</a></p>
+  </article>
+
+  <article>
+    <h3><span class="tag infra">基础设施</span>AMD Helion：把「Agent 执行」当成独立的 CPU 负载来设计的开放机架，单柜最多 32,768 个 Zen 6 核</h3>
+    <p>AMD 10 月 12 日在 OCP 全球峰会期间发布 Helion 开放机架蓝图，思路是 Agent 不只是调用模型，还要大量跑代码、调工具、执行工作流，这部分是 CPU 负载。它提供两类示例配置：面向超大规模云厂商的纯 CPU 机架，用第 6 代 EPYC，单柜最多 32,768 核，专门承担 Agent 执行，再连到独立的推理集群；面向企业的一体机架，把 EPYC CPU 节点、Instinct MI350P GPU 节点和通用计算放在同一平台。</p>
+    <p>Helion 还集成了一个 token router，把 Agent 的模型调用分发到前沿闭源模型和开源模型上，支持风冷和液冷。AMD 计划把规格贡献给 OCP，Dell、HPE、Lenovo、Supermicro、鸿海、QCT、Wiwynn、Cisco 等已表态支持，合作伙伴的配置预计 2026 年 11 月推出。对构建者：在 Agent 平台的容量规划里，沙箱和工具执行的 CPU 开销正在被单独拿出来规划。</p>
+    <p class="sources">来源：<a href="https://newsroom.amd.com/news/open-rack-blueprint-scale-agentic-ai/" rel="noopener">AMD Newsroom（2026-10-12）</a> · <a href="https://www.datacenterdynamics.com/en/news/amd-unveils-cpu-only-helion-rack-to-support-agentic-ai-workloads/" rel="noopener">DCD</a> · <a href="https://www.tomshardware.com/pc-components/cpus/amd-debuts-helion-reference-design-for-agentic-ai-servers-with-up-to-32-768-zen-6-venice-cores-rack-design-ships-next-year-in-cpu-only-and-all-in-one-configurations" rel="noopener">Tom's Hardware</a></p>
+  </article>
+
+  <div class="section"><h2>政策 Policy</h2></div>
+
+  <article>
+    <h3><span class="tag policy">政策</span>美国撤回限制：美国 AI 公司可再次在发布前把模型交给英国 AI Security Institute 做安全测试</h3>
+    <p>据 The Telegraph 10 月 11 日报道（Reuters 等转载），特朗普政府撤回了此前不鼓励 OpenAI、Anthropic 等公司在公开发布前把最新模型交给英国 AI Security Institute 测试的指示，英国 AISI 由此恢复预发布访问。报道同时提到，美国新成立的 AI 工作组上周五表示，开发者必须报告涉及其模型的安全事件。</p>
+    <p>这次调整恢复的是原有的自愿合作安排，并不是美国新设许可或预审制度。对构建者：前沿模型发布前的第三方评测窗口重新打开，可能影响大厂的发布节奏；安全事件报告要求的具体细则还需关注后续正式文件。</p>
+    <p class="sources">来源：<a href="https://www.telegraph.co.uk/news/2026/10/11/britain-get-first-look-ai-systems-after-white-house-u-turn/" rel="noopener">The Telegraph（2026-10-11）</a> · <a href="https://enterpriseai.economictimes.indiatimes.com/news/industry/trump-administration-allows-us-ai-developers-to-share-models-with-britain-for-safety-testing/134885083" rel="noopener">ETEnterpriseAI 转载 Reuters（2026-10-12）</a></p>
+  </article>
+
+  <footer>
+    生成于 2026-10-13（Asia/Shanghai）· 窗口约为 2026-10-12 08:00 至 2026-10-13 08:00（Asia/Shanghai），条目来自已核对的 Meta、Anthropic、Z.ai、AMD 官方发布，Hugging Face 模型页、GitHub 仓库与 arXiv 论文，以及 TechCrunch、The Decoder、MarkTechPost、ArtificialWatch、OrcaRouter、DCD、Tom's Hardware、The Telegraph、ETEnterpriseAI 的报道。模型和论文指标均为厂商或作者自报（Artificial Analysis 指数除外），未经第三方复现；未编造事实或链接。QwenGyre、Fork-and-Flush 论文和 usd-brep 仓库首发略早于窗口，但这两天才被集中报道，一并收录。Gemini 4 Argon（10-10 已收录，尚未全面开放）、OpenAI 批量数学论文（10-07、10-11 已收录）、EmbeddingGemma 2（10-07 已收录）不重复；只在 X 汇总里出现、找不到一手来源的说法（如某 harness 对比测评的具体数字）未收录。
+  </footer>
+</div>
+</body>
+</html>
