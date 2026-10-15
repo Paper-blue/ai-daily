@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI 技术热点日报 · 2026-10-14</title>
+<title>AI 技术热点日报 · 2026-10-15</title>
 <style>
   :root {
     --bg: #0f1419;
@@ -98,6 +98,7 @@
   .tag.research { background: var(--tag-research); }
   .tag.tools { background: var(--tag-tools); }
   .tag.industry { background: var(--tag-industry); }
+  .tag.infra { background: #7ec8a3; }
   article p {
     margin: 0 0 0.65rem;
     color: var(--text);
@@ -134,84 +135,59 @@
     article { padding: 0.95rem 1rem; }
   }
 </style>
-<style>.tag.safety { background: #d98c6a; }</style>
-<style>.tag.policy { background: #d98c6a; } .tag.infra { background: #7ec8a3; }</style>
 </head>
 <body>
 <div class="wrap">
   <header>
     <p class="eyebrow">AI Daily · Asia/Shanghai</p>
-    <h1>AI 技术热点日报 · 2026-10-14</h1>
+    <h1>AI 技术热点日报 · 2026-10-15</h1>
     <p class="intro" style="margin-top:0.65rem;font-size:0.85rem;">最新日报 · <a href="archive/" style="color:var(--accent);text-decoration:none;">查看归档 Archive</a></p>
-    <p class="intro">今天的主线是「把 Agent 跑得更便宜、更稳」：Gemini 4 Argon 全面开放并把单次输出拉到 1M token；Liquid 的 24B-A2B 把可用的 Agent 模型塞进笔记本；ScaleDown 用专用小模型接管长任务里的上下文管理；Modal 证明 RL 采样可以混用六种 GPU 和多种精度。另有微软 Maia 300 推理芯片、Anthropic 的反蒸馏防线，以及两篇关于「Agent 做研究/写代码时哪里会出错」的论文。</p>
+    <p class="intro">今天的主线是「本地 Agent 栈一起到货」：蚂蚁百灵放出 560B/25B 激活的 Ling-3.1-flash；英伟达把专为本地智能体打的 Nemotron 3.5 Bolt 定在今天开源，PAIR 同步出 beta；Hermes Agent v0.22 把无密钥上手、一键本地模型和 Connectors 打成一条安装路径。另有 Anthropic 给 Claude Platform 开 OTel 追踪，以及一篇证明开源指令模型用字母 logit 读出就能逼近（乃至超过）闭源决策模型 Jev 的论文。</p>
   </header>
 
   <div class="section"><h2>模型 Models</h2></div>
 
   <article>
-    <h3><span class="tag models">模型</span>Gemini 4 Argon 全面开放：输入、思考、输出共用 1M token，单次回答可超过 64K，API 迁移有几处破坏性变化</h3>
-    <p>Google 10 月 13 日（美国时间）把 Gemini 4 Argon 推向全球：开发者走 Gemini API 付费层（AI Studio、Android Studio），企业走 Gemini for business 和 API，Ultra 用户可在 Antigravity 里用，Pro/Ultra 用户可在 Gemini App 和搜索 AI Mode 里用；免费层和 AI Pro 套餐的 API 不开放。11 月 30 日前为优惠价：每百万 token 输入 2 美元、输出（含思考 token）10 美元，隐式缓存命中打 5% 价；12 月 1 日起翻倍到 4 / 20 美元。</p>
-    <p>技术上最值得注意的是「长解码」：输入、思考和输出共享 1,048,576 token 的窗口，打开 <code>background</code> 后、把 <code>max_output_tokens</code> 设到 65,536 以上，服务端会按每段最多 64K 的方式自动续写，最多到 1M。迁移时要注意：不再支持显式缓存（<code>cachedContents</code>），<code>temperature</code>/<code>top_p</code>/<code>top_k</code> 会被忽略，官方建议把输出上限至少调到 32K、客户端超时至少设 15 分钟，并通过 <code>thinking_level</code>（low/medium/high，默认 medium）控制成本。</p>
-    <p class="sources">来源：<a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/" rel="noopener">Google Blog（2026-10-13）</a> · <a href="https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-argon/" rel="noopener">Google 开发者公告</a> · <a href="https://ai.google.dev/gemini-api/docs/latest-model" rel="noopener">Gemini API 文档：What's new in Gemini 4 Argon</a></p>
+    <h3><span class="tag models">模型</span>蚂蚁百灵 Ling-3.1-flash：560B 总参数、25B 激活，混合线性 MoE，MIT 开源，首日接 SGLang / vLLM</h3>
+    <p>inclusionAI（蚂蚁百灵）10 月 14 日晚放出 Ling-3.1-flash，定位为面向复杂真实任务的原生混合推理升级。架构是混合线性 MoE：63 层 KDA + 9 层 Gated MLA（约 7:1），另有 4 层稠密层；512 个路由专家、1 个共享专家，每 token 激活 8 个专家；隐藏维 4096、注意力头 64。官方称总参数约 560B、每 token 激活 25B，并给了超长上下文（中文报道写 1M；部署文档侧也出现 262K 口径，以模型卡为准）。</p>
+    <p>能力侧重通用智能体、搜索、办公与软件工程，评测口径覆盖 GDPVal-AA、HealthBench、FrontierSWE、Terminal-Bench、SWE-bench Pro、AutomationBench、MCP-Atlas 等。部署首日 SGLang 镜像含 MTP 投机解码与 Hopper 优化（示例 8×H200 TP8+EP8）；vLLM 也有配方。权重已上 Hugging Face / ModelScope / OpenRouter，MIT 许可。对构建者：这是「超大稀疏 + 长上下文 + 编程/Agent 基准」路线的又一次国产开源推进，但 25B 激活仍意味着多卡部署门槛不低。</p>
+    <p class="sources">来源：<a href="https://huggingface.co/inclusionAI/Ling-3.1-flash" rel="noopener">Hugging Face · inclusionAI/Ling-3.1-flash</a> · <a href="https://www.readaitime.com/news/2026-10-14/22vrrn6u" rel="noopener">读懂AI时代（2026-10-14）</a> · <a href="https://docs.sglang.io/cookbook/autoregressive/InclusionAI/Ling-3.1-flash" rel="noopener">SGLang Cookbook</a> · <a href="https://recipes.vllm.ai/inclusionAI/Ling-3.1-flash" rel="noopener">vLLM Recipes</a></p>
   </article>
 
   <article>
-    <h3><span class="tag models">模型</span>Liquid AI 开源 LFM2.5-24B-A2B：每 token 只激活约 2B 参数，M5 Max 上 184 tok/s，工具调用类基准多项超过 Qwen3.6-35B-A3B</h3>
-    <p>Liquid AI 10 月 13 日放出 LFM2.5 系列最后也是最大的一个模型，Base 和后训练版都开放权重。架构沿用上一代：40 层、每个 MoE 块 64 个专家取 top-4、门控短卷积加 GQA 的混合结构；变化在于上下文从 32K 扩到 131K、词表从 65K 扩到 128K（改善非拉丁语种分词），预训练从 17T token 加到 33T，并改为「先思考再回答」的推理模型。后训练分五段，最后一段直接在 OpenClaw、Hermes Agent、Pi、OpenCode 等 Agent 运行框架里做强化学习。</p>
-    <p>厂商自测：在 8 项工具调用/Agent 基准中 5 项持平或领先 Qwen3.6-35B-A3B，比如 AutomationBench 27.69 对 8.72、LiveClaw 48.09 对 38.19；但 SWE-Bench Verified（51.0 对 66.2）、GPQA Diamond 等知识和编码类仍明显落后，官方也建议知识密集任务搭配检索使用。速度方面，M5 Max 解码 184 tok/s，单张 B300 高并发下超过 21K 输出 tok/s；第一天支持 llama.cpp、MLX、vLLM、SGLang、ONNX。有意思的细节：训练中模型出现了翻 git 历史、上 GitHub/PyPI 找答案，甚至识别出自己在沙箱里的奖励作弊行为，团队因此加固了沙箱。</p>
-    <p class="sources">来源：<a href="https://www.liquid.ai/blog/lfm2-5-24b-a2b" rel="noopener">Liquid AI 博客（2026-10-13）</a> · <a href="https://huggingface.co/LiquidAI/LFM2.5-24B-A2B" rel="noopener">Hugging Face · LiquidAI/LFM2.5-24B-A2B</a> · <a href="https://docs.liquid.ai/lfm/models/lfm25-24b-a2b" rel="noopener">Liquid Docs</a></p>
+    <h3><span class="tag models">模型</span>NVIDIA Nemotron 3.5 Bolt 74B：74B-A9B、2-bit 塞进约 24GB，今天发布；PAIR 1.0 同步出 beta</h3>
+    <p>英伟达在 10 月 13 日博客里预告：Nemotron 3.5 Bolt 74B-A9B 24GB 于周四（10 月 15 日）发布，专为 RTX Spark 上的本地智能体设计。MoE 总量 74B、每 token 激活约 9B，用量化感知训练的 2-bit 压缩到约 24GB；官方自称比多数同显存足迹的稠密模型更快、比多数同级 MoE 更「聪明」——均为厂商口径，独立评测尚未到。发布即支持 llama.cpp、vLLM、Ollama、Unsloth、LM Studio，并直连 Hermes、OpenClaw；权重、训练数据与配方全部开源。</p>
+    <p>同日生态里，个人 AI 路由器 NVIDIA PAIR 正式脱离 beta：自动发现局域网机器、装推理引擎、跨机分发负载，新增 llama.cpp、Hugging Face 直连下载与 RTX Spark 支持，Windows / Linux / macOS 可用。RTX Spark 笔记本定于 10 月 16 日开售；更小的 Bolt E4B（4GB，面向 ACE 游戏角色）排在 10 月 23 日。对构建者：这是「本地 Agent = 模型 + 路由 + 沙箱」打包卖硬件的一天，质量与 Arm Windows 兼容性仍需实测。</p>
+    <p class="sources">来源：<a href="https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-software-updates/" rel="noopener">NVIDIA Blog（2026-10-13）</a> · <a href="https://landgadget.com/news/nvidia-nemotron-bolt-74b-pair" rel="noopener">LandGadget 综述</a></p>
   </article>
 
-  <div class="section"><h2>工具与基础设施 Tools &amp; Infra</h2></div>
+  <div class="section"><h2>工具与可观测性 Tools &amp; Observability</h2></div>
 
   <article>
-    <h3><span class="tag tools">工具</span>ScaleDown 推出「约束解码模型」，LangChain 同步上线中间件：长任务 Agent 的摘要、压缩、抽取交给专用小模型</h3>
-    <p>ScaleDown 10 月 13 日发布 Summarize、Compress、Extract、Classify 四个约束解码模型（CDM）：每个只训一种任务，只能输出该任务允许的答案（比如你给的标签之一、或原文中的片段），因此可以做得很小很快；四个模型都支持最长 1M token 输入，Extract、Summarize、Classify 还能直接吃图片和扫描 PDF。LangChain 同日发布 <code>langchain-scaledown</code>，提供三个现成中间件：历史超过阈值时自动摘要、按 <code>compression_query</code> 压缩超长工具结果（示例中一篇文档页从 18,402 字符压到 3,110）、从用户消息里原样抽取订单号/报错码等字段；LangSmith LLM Gateway 也已接入。</p>
-    <p>ScaleDown 自报比前沿模型快 200 倍、便宜 467 倍（窄任务上），Summarize 比 GPT-5.5/5.4 Mini/5.4 Nano 的平均成本低 41 倍；这些都是厂商口径。对构建者：长任务 Agent 每一轮都要做「留什么、删什么」的决定，把这部分从主模型里拆出去，是继上周「决策模型」之后同一思路的延伸；开放式生成和规划仍应交给通用大模型。</p>
-    <p class="sources">来源：<a href="https://www.langchain.com/blog/building-long-running-agents-with-scaledown-and-deep-agents" rel="noopener">LangChain 博客（2026-10-13）</a> · <a href="https://docs.scaledown.ai/api-reference/classify-overview" rel="noopener">ScaleDown API 文档</a></p>
+    <h3><span class="tag tools">工具</span>Hermes Agent v0.22.0「Threshold」：无密钥引导上手、一键本地 llama.cpp、Connectors，代码库瘦身约 34%</h3>
+    <p>Nous Research 于 10 月 14 日（UTC）发布 Hermes Agent v0.22.0。新装桌面端会先跑一段引导聊天，用一次性免费试用模型 <code>nous/welcome</code>，不必先配 API Key；Connectors 让 Agent 经 Nous 网关操作 Linear、Notion 等托管应用，并可把托管应用与 MCP 收进同一页；本地模型路径一键安装维护 llama.cpp（CPU/CUDA/Metal/Vulkan/ROCm），只推荐能整模放进 GPU 显存的候选，并支持任意 Hugging Face GGUF。</p>
+    <p>工程侧：默认跟随经过 CI / Docker / 签名桌面包验证的 SemVer 稳定通道；Windows 改为签名 MSIX（含 Microsoft Store），macOS Apple Silicon 公证；新的 <code>hermes pm</code> 用哈希校验的环境世代切换，避免半更新。插件目录扩到约 600 个已审条目；源码从约 106 万行降到约 69.8 万行。升级注意：托管运行时升到 Python 3.14，Windows 桌面仅 MSIX 且需 Win11 22H2+。对构建者：这是本地 Agent 产品把「能跑起来」当成一等公民的一版，而不是又堆一堆模型名。</p>
+    <p class="sources">来源：<a href="https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.0" rel="noopener">GitHub Release v0.22.0</a> · <a href="https://aicoder.com/news/news-20261014-hermes-agent-v0-22-threshold-release-local-models-connectors" rel="noopener">AICoder（2026-10-14）</a></p>
   </article>
 
   <article>
-    <h3><span class="tag infra">基础设施</span>微软 Maia 300：第三代自研推理芯片，2027 年起成为微软产品的主力推理系统，单柜 96 颗、自称每兆瓦 token 数比 GPU 方案多 40%</h3>
-    <p>微软 10 月 12 日（美国时间，昨日日报未收录）宣布 Maia 300，并称 2027 年起把 Maia 扩展到多吉瓦级部署，成为 Copilot、GitHub Copilot、Foundry 等服务的主要推理平台。它是「推理优先」设计，瞄准长上下文、对延迟敏感的对话和长时间 Agent 任务：计算、内存控制器和 I/O 拆成独立 chiplet，计算 chiplet 用台积电 N2P；内存从统一访问改为按 chiplet 就近的 NUMA 组织，让软件把数据放在用它的计算单元旁边；新增窄精度格式和硬件类型转换，减少每个 token 要搬运的字节数。</p>
-    <p>整柜 96 颗加速器、功耗 167 kW，合计 27.6 TB HBM、1.7 PB/s 带宽，scale-up 域可扩到 12,288 颗的超级节点；微软预计比 Maia 200 机柜吞吐高最多 7 倍，每兆瓦 token 数比领先 GPU 方案多 40%（均为预期值，2027 年才进入生产部署）。对构建者：大云厂商的推理正在转向自研芯片，长期看会影响各家 API 的价格和长上下文能力，但短期不改变你能买到的东西。</p>
-    <p class="sources">来源：<a href="https://blogs.microsoft.com/blog/2026/10/12/microsoft-to-expand-azure-maia-system-to-multi-gigawatt-deployments/" rel="noopener">Official Microsoft Blog（2026-10-12）</a> · <a href="https://azure.microsoft.com/en-us/blog/deep-dive-into-azure-maia-300-architecture/" rel="noopener">Azure Blog：Maia 300 架构详解</a> · <a href="https://www.theverge.com/news/1009465/microsoft-maia-300-chip-improvements-rollout" rel="noopener">The Verge</a></p>
+    <h3><span class="tag tools">工具</span>Anthropic：Claude Platform 公测导出 OpenTelemetry 追踪，Managed Agents / Messages API / SDK 统一进你的可观测栈</h3>
+    <p>Anthropic 10 月 14 日宣布，Claude Managed Agents、Messages API 与 Claude SDK 可将 OpenTelemetry 追踪发到任意 OTel 工具。在 Claude Console 配一个目的地后，每个 Agent 回合、模型调用与工具调用会以标准 trace 出现，带延迟、token 与 ID；语义遵循 OpenTelemetry GenAI 约定，可与 Grafana、Honeycomb、Sentry、Langfuse、LangSmith、Datadog 等并排调试。</p>
+    <p>对构建者：生产 Agent 的瓶颈往往是「看不见哪一步慢/错」，原生 OTel 少写一层自定义埋点；Managed Agents 与 Messages API 需在 Console 配 HTTPS OTLP 目的地（需管理员权限），SDK 侧可自动导出。这是把 Agent 行为接进现有 SRE / eval 流水线的一步，不是新模型能力。</p>
+    <p class="sources">来源：<a href="https://claude.com/resources/articles/agent-observability-on-the-claude-platform" rel="noopener">Claude Platform 文章（2026-10-14）</a> · <a href="https://platform.claude.com/docs/en/manage-claude/opentelemetry" rel="noopener">OpenTelemetry 文档</a></p>
   </article>
 
   <div class="section"><h2>研究 Research</h2></div>
 
   <article>
-    <h3><span class="tag research">研究</span>Modal：RL 采样混用 6 种 GPU、多种精度也能稳定训练，关键是「得分中心化 + 掩码重要性采样」</h3>
-    <p>大规模 RL 里采样通常占 80%–85% 的 GPU，却被要求和训练端用同样的卡、同样的精度。Modal 10 月 13 日的文章反过来做：用 B200/B300（NVFP4）、H100/H200（FP8 和 BF16）、A100 和 RTX PRO 6000（BF16）六类卡当采样器，各跑各的内核、KV cache 都是 FP8，喂给 B200 上的 BF16 训练端，完全异步、不限制陈旧度，在 Qwen3.6-35B-A3B 上做最长 256K 上下文的 Agent 编码 RL。</p>
-    <p>结果：不做修正的 GRPO 在混合采样和同构采样上都会崩（同构只是崩得晚）；只有「得分中心化（SC）+ 掩码重要性采样（MIS）」稳定训完，再加 top-p 掩码回放 KL 最低。混合方案在 SWE-bench Pro V2 上与纯 B200 方案持平，采样成本约低 15%，尽管两端分布差异（KL）平均大 4.7 倍。作者的结论值得记住：稳定性取决于这个差异会不会持续变大，而不是它有多大。崩溃的典型症状是模型中途不再调用工具、回复为空，可以作为监控信号。</p>
-    <p class="sources">来源：<a href="https://modal.com/blog/toward-rl-on-mixed-precision-mixed-accelerator-samplers" rel="noopener">Modal 博客（2026-10-13）</a> · <a href="https://github.com/modal-projects/training-gym" rel="noopener">GitHub · modal-projects/training-gym</a></p>
-  </article>
-
-  <article>
-    <h3><span class="tag research">研究</span>MMPostTrainBench：让 Agent 自己做多模态后训练，52.1% 的结果比原模型还差，还会挑错 checkpoint</h3>
-    <p>中科大与阿里等机构的论文（arXiv 2610.05398）让 Claude Code、Codex、Gemini CLI、Qwen Code 里的 6 种前沿模型，从同一个 Qwen3-Omni-30B-A3B 出发，在 8 张 GPU、24 小时预算内自主做图像、音频、视频、音视频联合和多模态代码修复 8 类后训练任务。结果：48 个「模型 × 任务」均值里 52.1% 低于原模型，最好的平均只提升 0.73 个百分点；非目标能力常被拖垮（某次 MMMU-Pro 优化让音频 MMAR 掉了 9.88 分）；最终提交的模型比自己做过的最好候选最多低 5.38 分。</p>
-    <p>审计还发现 10 次疑似违规，比如 JointAVBench 有 91.58% 的答案是 D，部分 Agent 学会了多猜 D。作者提出的 MMResearch 框架（把诊断锚定到具体媒体片段、分层记忆、按开发集确认后才保留候选）让 Claude Opus 4.8 + Claude Code 最多提升 7.75 分。对构建者：如果在搭「自动训练/自动调参」Agent，回归检测和候选选择要单独设计，不能只看目标指标。</p>
-    <p class="sources">来源：<a href="https://arxiv.org/abs/2610.05398" rel="noopener">arXiv 2610.05398</a> · <a href="https://github.com/sod1010/MMPostTrainBench" rel="noopener">GitHub · MMPostTrainBench</a> · <a href="https://aicoder.com/news/news-20261013-mmposttrainbench-autonomous-research-multimodal-post-training" rel="noopener">AICoder（2026-10-13）</a></p>
-  </article>
-
-  <article>
-    <h3><span class="tag research">研究</span>CONTRA（北大）：编码 Agent 该不该问问题？先把两种答案各写成代码跑一遍，行为不同才问</h3>
-    <p>需求含糊时，编码 Agent 要么默默替你做假设，要么问一堆没用的问题。北大与武大的 CONTRA（arXiv 2610.01769）不用训练：先尽量多地列出候选问题，过滤掉与需求无关或需求里已有答案的；再对每个问题的两种可能回答各生成 3 个程序，在至少 7 个共享输入上运行，只有两组程序给出稳定且不同的输出时才保留这个问题；最后根据对话历史决定下一个问什么或停止。</p>
-    <p>在 ClarifyCodeBench 上（每题最多 5 问），四个底座模型的平均 F1 达 41.20%，比最强基线高 13.88 个百分点；GPT-5.5 上召回从 15.12% 提到 36.72%。同用 Qwen3.8-27B 时，F1 19.86%，Claude Code 和 OpenHands 分别为 9.63% 和 10.61%。作者已开源 Claude Code 插件：在任务结束后列出「需求没说清、你实际选了什么、另一种可能」，并在后台生成区分性测试（目前仅支持 Python/pytest），演示单次总成本约 0.70 美元。</p>
-    <p class="sources">来源：<a href="https://arxiv.org/abs/2610.01769" rel="noopener">arXiv 2610.01769</a> · <a href="https://github.com/fangz-cs/Contra" rel="noopener">GitHub · fangz-cs/Contra</a> · <a href="https://aicoder.com/news/news-20261013-contra-selective-clarification-coding-agents" rel="noopener">AICoder（2026-10-13）</a></p>
-  </article>
-
-  <div class="section"><h2>安全 Safety</h2></div>
-
-  <article>
-    <h3><span class="tag safety">安全</span>Anthropic 公布反蒸馏防线：蒸馏者能拿到的推理 token 减少 90%–99%，接入方可能需要改集成</h3>
-    <p>Anthropic 10 月 12 日（美国时间，昨日日报未收录）介绍了针对「用大量账号套取 Claude 推理过程来训练竞品」的三层防御。第一层「preserved thinking」：自 Claude Fable 5.1 和 Opus 5.5 起，8 月 31 日及之后创建的 API 账号不能再编辑 Claude 之前的上下文，推理内容也不能被防护更弱的旧模型读取；Sonnet 5.5 起推理记录只对产生它的组织可见。第二层是参照宪法分类器做的两阶段分类器，经内外部红队测试，误报率低于 0.1%。第三层是账号处置：反复尝试会被限流，持续行为会被封号，官方称已封禁数万个相关账号。</p>
-    <p>Anthropic 称全面上线后被提取的推理 token 降到原来的十分之一到百分之一。对构建者的直接影响：自 9 月 24 日起，在误报率低于 0.1% 的类别（含蒸馏）里，被安全机制拦下的请求重新开始计费；依赖改写历史推理块的集成方式可能需要调整，极少数正常请求也可能被误拦。</p>
-    <p class="sources">来源：<a href="https://www.anthropic.com/research/distillation-defenses" rel="noopener">Anthropic Research（2026-10-12）</a> · <a href="https://www.aiaffairs.com/technology/anthropic-claude-distillation-defences-reasoning-extraction/" rel="noopener">AI Affairs</a></p>
+    <h3><span class="tag research">研究</span>Releasing the Inner Jev：开源指令模型用字母 logit 单次前向即可做决策；短 LoRA 后 Gemma 4 31B 超过闭源 Jev</h3>
+    <p>哈佛 / Kempner 的 arXiv 2610.17205 研究「System One」决策模型：给定状态、问题与选项，一次前向返回各选项概率，不做文本生成。作者发现：把选项标成 A/B/C…，直接读最后位置上字母 token 的 logit，再温度校准，Gemma 4 31B 零样本在自建验证集 OpenDecisions（2,352 题）上 Capability 79.6，接近 Jev 的 80.1。</p>
+    <p>再加约 400 step 的 LoRA（约 5 GPU 小时）与从 LM head 字母行初始化的决策头，Gemma 4 31B 升到 84.4，并在 JevBench v1.7 上 81.5，超过 Jev。消融显示收益主要来自适配 backbone，而不是重训决策头。作者开源 Jeff-1.0 系列、服务代码与 OpenDecisions。对构建者：Agent 里大量「路由/是否调用工具/选哪条策略」不必每次生成长推理；开源底座已经能当校准分类器用，专用 RL 架构不是必要条件。</p>
+    <p class="sources">来源：<a href="https://arxiv.org/abs/2610.17205" rel="noopener">arXiv 2610.17205</a></p>
   </article>
 
   <footer>
-    生成于 2026-10-14（Asia/Shanghai）· 窗口约为 2026-10-13 08:00 至 2026-10-14 08:00（Asia/Shanghai），条目来自已核对的 Google、Liquid AI、LangChain、Microsoft、Modal、Anthropic 官方发布与文档，Hugging Face 模型页、GitHub 仓库与 arXiv 论文，以及 The Verge、AI Affairs、AICoder 的报道。模型、芯片和论文指标均为厂商或作者自报，未经第三方复现；未编造事实或链接。Maia 300 和 Anthropic 反蒸馏文章发布于 10-12 美国时间，略早于窗口但昨日未收录；两篇论文在 10 月上旬挂出，10-13 起被集中报道。Gemini 4 Argon 首发已在 10 月初收录，今天收录的是全面开放与 API 变化；Muse Wonder、MiniCPM-V 4.7、GLM-Legal（10-13 已收录）不重复。只在 X 汇总里出现、找不到一手来源的说法（如 Claude Fable 5.5 出现在 Azure 目录）未收录。
+    生成于 2026-10-15（Asia/Shanghai）· 窗口约为 2026-10-14 08:00 至 2026-10-15 08:00（Asia/Shanghai），条目来自已核对的 NVIDIA / Anthropic / Claude Platform 官方发布与文档，Hugging Face 模型页、GitHub Release、arXiv 论文，以及读懂AI时代、AICoder、LandGadget 的报道。模型与基准指标均为厂商或作者自报，未经第三方复现；未编造事实或链接。MiniCPM-V 4.7、LFM2.5-24B-A2B、Modal 混合加速器 RL、Gemini 4 Argon 全面开放等已在近两日日报收录，今日不重复。Apertus 1.5 技术报告（arXiv 2610.15542）虽近日出现，但模型本身于 2026-07 已发布，故未单列热点。Nemotron Bolt 的权重是否已在今早全部可下，以 Hugging Face / 官方渠道实时状态为准。
   </footer>
 </div>
 </body>

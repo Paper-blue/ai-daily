@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 技术热点日报 · 2026-10-15</title>
+<style>
+  :root {
+    --bg: #0f1419;
+    --surface: #1a2332;
+    --surface2: #243044;
+    --text: #e7ecf3;
+    --muted: #9aa8bc;
+    --accent: #5b9fd4;
+    --accent2: #7ec8a3;
+    --border: #2d3a4d;
+    --tag-models: #5b9fd4;
+    --tag-research: #c9a45c;
+    --tag-tools: #7ec8a3;
+    --tag-industry: #c97b9b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+      "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    font-size: 16px;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 1.5rem 1.25rem 3rem;
+  }
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  .eyebrow {
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin: 0 0 0.4rem;
+  }
+  h1 {
+    font-size: 1.55rem;
+    font-weight: 700;
+    margin: 0 0 0.75rem;
+    line-height: 1.3;
+  }
+  .intro {
+    color: var(--muted);
+    margin: 0;
+    font-size: 0.95rem;
+  }
+  .section {
+    margin: 1.75rem 0 0.75rem;
+  }
+  .section h2 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+    margin: 0;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--border);
+  }
+  article {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.1rem 1.15rem;
+    margin: 0.85rem 0;
+  }
+  article h3 {
+    font-size: 1.05rem;
+    font-weight: 650;
+    margin: 0 0 0.65rem;
+    line-height: 1.4;
+  }
+  .tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding: 0.12rem 0.45rem;
+    border-radius: 4px;
+    color: #0f1419;
+    margin-right: 0.4rem;
+    vertical-align: middle;
+  }
+  .tag.models { background: var(--tag-models); }
+  .tag.research { background: var(--tag-research); }
+  .tag.tools { background: var(--tag-tools); }
+  .tag.industry { background: var(--tag-industry); }
+  .tag.infra { background: #7ec8a3; }
+  article p {
+    margin: 0 0 0.65rem;
+    color: var(--text);
+    font-size: 0.92rem;
+  }
+  article p:last-of-type { margin-bottom: 0.5rem; }
+  .sources {
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  .sources a {
+    color: var(--accent);
+    text-decoration: none;
+    word-break: break-all;
+  }
+  .sources a:hover { text-decoration: underline; }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.85em;
+    background: var(--surface2);
+    padding: 0.1em 0.35em;
+    border-radius: 4px;
+  }
+  footer {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.78rem;
+    color: var(--muted);
+  }
+  @media (max-width: 480px) {
+    .wrap { padding: 1.1rem 0.9rem 2.5rem; }
+    h1 { font-size: 1.3rem; }
+    article { padding: 0.95rem 1rem; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="eyebrow">AI Daily · Asia/Shanghai</p>
+    <h1>AI 技术热点日报 · 2026-10-15</h1>
+    <p class="intro" style="margin-top:0.65rem;font-size:0.85rem;">最新日报 · <a href="archive/" style="color:var(--accent);text-decoration:none;">查看归档 Archive</a></p>
+    <p class="intro">今天的主线是「本地 Agent 栈一起到货」：蚂蚁百灵放出 560B/25B 激活的 Ling-3.1-flash；英伟达把专为本地智能体打的 Nemotron 3.5 Bolt 定在今天开源，PAIR 同步出 beta；Hermes Agent v0.22 把无密钥上手、一键本地模型和 Connectors 打成一条安装路径。另有 Anthropic 给 Claude Platform 开 OTel 追踪，以及一篇证明开源指令模型用字母 logit 读出就能逼近（乃至超过）闭源决策模型 Jev 的论文。</p>
+  </header>
+
+  <div class="section"><h2>模型 Models</h2></div>
+
+  <article>
+    <h3><span class="tag models">模型</span>蚂蚁百灵 Ling-3.1-flash：560B 总参数、25B 激活，混合线性 MoE，MIT 开源，首日接 SGLang / vLLM</h3>
+    <p>inclusionAI（蚂蚁百灵）10 月 14 日晚放出 Ling-3.1-flash，定位为面向复杂真实任务的原生混合推理升级。架构是混合线性 MoE：63 层 KDA + 9 层 Gated MLA（约 7:1），另有 4 层稠密层；512 个路由专家、1 个共享专家，每 token 激活 8 个专家；隐藏维 4096、注意力头 64。官方称总参数约 560B、每 token 激活 25B，并给了超长上下文（中文报道写 1M；部署文档侧也出现 262K 口径，以模型卡为准）。</p>
+    <p>能力侧重通用智能体、搜索、办公与软件工程，评测口径覆盖 GDPVal-AA、HealthBench、FrontierSWE、Terminal-Bench、SWE-bench Pro、AutomationBench、MCP-Atlas 等。部署首日 SGLang 镜像含 MTP 投机解码与 Hopper 优化（示例 8×H200 TP8+EP8）；vLLM 也有配方。权重已上 Hugging Face / ModelScope / OpenRouter，MIT 许可。对构建者：这是「超大稀疏 + 长上下文 + 编程/Agent 基准」路线的又一次国产开源推进，但 25B 激活仍意味着多卡部署门槛不低。</p>
+    <p class="sources">来源：<a href="https://huggingface.co/inclusionAI/Ling-3.1-flash" rel="noopener">Hugging Face · inclusionAI/Ling-3.1-flash</a> · <a href="https://www.readaitime.com/news/2026-10-14/22vrrn6u" rel="noopener">读懂AI时代（2026-10-14）</a> · <a href="https://docs.sglang.io/cookbook/autoregressive/InclusionAI/Ling-3.1-flash" rel="noopener">SGLang Cookbook</a> · <a href="https://recipes.vllm.ai/inclusionAI/Ling-3.1-flash" rel="noopener">vLLM Recipes</a></p>
+  </article>
+
+  <article>
+    <h3><span class="tag models">模型</span>NVIDIA Nemotron 3.5 Bolt 74B：74B-A9B、2-bit 塞进约 24GB，今天发布；PAIR 1.0 同步出 beta</h3>
+    <p>英伟达在 10 月 13 日博客里预告：Nemotron 3.5 Bolt 74B-A9B 24GB 于周四（10 月 15 日）发布，专为 RTX Spark 上的本地智能体设计。MoE 总量 74B、每 token 激活约 9B，用量化感知训练的 2-bit 压缩到约 24GB；官方自称比多数同显存足迹的稠密模型更快、比多数同级 MoE 更「聪明」——均为厂商口径，独立评测尚未到。发布即支持 llama.cpp、vLLM、Ollama、Unsloth、LM Studio，并直连 Hermes、OpenClaw；权重、训练数据与配方全部开源。</p>
+    <p>同日生态里，个人 AI 路由器 NVIDIA PAIR 正式脱离 beta：自动发现局域网机器、装推理引擎、跨机分发负载，新增 llama.cpp、Hugging Face 直连下载与 RTX Spark 支持，Windows / Linux / macOS 可用。RTX Spark 笔记本定于 10 月 16 日开售；更小的 Bolt E4B（4GB，面向 ACE 游戏角色）排在 10 月 23 日。对构建者：这是「本地 Agent = 模型 + 路由 + 沙箱」打包卖硬件的一天，质量与 Arm Windows 兼容性仍需实测。</p>
+    <p class="sources">来源：<a href="https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-software-updates/" rel="noopener">NVIDIA Blog（2026-10-13）</a> · <a href="https://landgadget.com/news/nvidia-nemotron-bolt-74b-pair" rel="noopener">LandGadget 综述</a></p>
+  </article>
+
+  <div class="section"><h2>工具与可观测性 Tools &amp; Observability</h2></div>
+
+  <article>
+    <h3><span class="tag tools">工具</span>Hermes Agent v0.22.0「Threshold」：无密钥引导上手、一键本地 llama.cpp、Connectors，代码库瘦身约 34%</h3>
+    <p>Nous Research 于 10 月 14 日（UTC）发布 Hermes Agent v0.22.0。新装桌面端会先跑一段引导聊天，用一次性免费试用模型 <code>nous/welcome</code>，不必先配 API Key；Connectors 让 Agent 经 Nous 网关操作 Linear、Notion 等托管应用，并可把托管应用与 MCP 收进同一页；本地模型路径一键安装维护 llama.cpp（CPU/CUDA/Metal/Vulkan/ROCm），只推荐能整模放进 GPU 显存的候选，并支持任意 Hugging Face GGUF。</p>
+    <p>工程侧：默认跟随经过 CI / Docker / 签名桌面包验证的 SemVer 稳定通道；Windows 改为签名 MSIX（含 Microsoft Store），macOS Apple Silicon 公证；新的 <code>hermes pm</code> 用哈希校验的环境世代切换，避免半更新。插件目录扩到约 600 个已审条目；源码从约 106 万行降到约 69.8 万行。升级注意：托管运行时升到 Python 3.14，Windows 桌面仅 MSIX 且需 Win11 22H2+。对构建者：这是本地 Agent 产品把「能跑起来」当成一等公民的一版，而不是又堆一堆模型名。</p>
+    <p class="sources">来源：<a href="https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.0" rel="noopener">GitHub Release v0.22.0</a> · <a href="https://aicoder.com/news/news-20261014-hermes-agent-v0-22-threshold-release-local-models-connectors" rel="noopener">AICoder（2026-10-14）</a></p>
+  </article>
+
+  <article>
+    <h3><span class="tag tools">工具</span>Anthropic：Claude Platform 公测导出 OpenTelemetry 追踪，Managed Agents / Messages API / SDK 统一进你的可观测栈</h3>
+    <p>Anthropic 10 月 14 日宣布，Claude Managed Agents、Messages API 与 Claude SDK 可将 OpenTelemetry 追踪发到任意 OTel 工具。在 Claude Console 配一个目的地后，每个 Agent 回合、模型调用与工具调用会以标准 trace 出现，带延迟、token 与 ID；语义遵循 OpenTelemetry GenAI 约定，可与 Grafana、Honeycomb、Sentry、Langfuse、LangSmith、Datadog 等并排调试。</p>
+    <p>对构建者：生产 Agent 的瓶颈往往是「看不见哪一步慢/错」，原生 OTel 少写一层自定义埋点；Managed Agents 与 Messages API 需在 Console 配 HTTPS OTLP 目的地（需管理员权限），SDK 侧可自动导出。这是把 Agent 行为接进现有 SRE / eval 流水线的一步，不是新模型能力。</p>
+    <p class="sources">来源：<a href="https://claude.com/resources/articles/agent-observability-on-the-claude-platform" rel="noopener">Claude Platform 文章（2026-10-14）</a> · <a href="https://platform.claude.com/docs/en/manage-claude/opentelemetry" rel="noopener">OpenTelemetry 文档</a></p>
+  </article>
+
+  <div class="section"><h2>研究 Research</h2></div>
+
+  <article>
+    <h3><span class="tag research">研究</span>Releasing the Inner Jev：开源指令模型用字母 logit 单次前向即可做决策；短 LoRA 后 Gemma 4 31B 超过闭源 Jev</h3>
+    <p>哈佛 / Kempner 的 arXiv 2610.17205 研究「System One」决策模型：给定状态、问题与选项，一次前向返回各选项概率，不做文本生成。作者发现：把选项标成 A/B/C…，直接读最后位置上字母 token 的 logit，再温度校准，Gemma 4 31B 零样本在自建验证集 OpenDecisions（2,352 题）上 Capability 79.6，接近 Jev 的 80.1。</p>
+    <p>再加约 400 step 的 LoRA（约 5 GPU 小时）与从 LM head 字母行初始化的决策头，Gemma 4 31B 升到 84.4，并在 JevBench v1.7 上 81.5，超过 Jev。消融显示收益主要来自适配 backbone，而不是重训决策头。作者开源 Jeff-1.0 系列、服务代码与 OpenDecisions。对构建者：Agent 里大量「路由/是否调用工具/选哪条策略」不必每次生成长推理；开源底座已经能当校准分类器用，专用 RL 架构不是必要条件。</p>
+    <p class="sources">来源：<a href="https://arxiv.org/abs/2610.17205" rel="noopener">arXiv 2610.17205</a></p>
+  </article>
+
+  <footer>
+    生成于 2026-10-15（Asia/Shanghai）· 窗口约为 2026-10-14 08:00 至 2026-10-15 08:00（Asia/Shanghai），条目来自已核对的 NVIDIA / Anthropic / Claude Platform 官方发布与文档，Hugging Face 模型页、GitHub Release、arXiv 论文，以及读懂AI时代、AICoder、LandGadget 的报道。模型与基准指标均为厂商或作者自报，未经第三方复现；未编造事实或链接。MiniCPM-V 4.7、LFM2.5-24B-A2B、Modal 混合加速器 RL、Gemini 4 Argon 全面开放等已在近两日日报收录，今日不重复。Apertus 1.5 技术报告（arXiv 2610.15542）虽近日出现，但模型本身于 2026-07 已发布，故未单列热点。Nemotron Bolt 的权重是否已在今早全部可下，以 Hugging Face / 官方渠道实时状态为准。
+  </footer>
+</div>
+</body>
+</html>
